@@ -1,0 +1,180 @@
+﻿@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 87.5%;
+}
+p {
+	margin: 0 0 20px 0;
+}
+img {
+	border: 0;
+	vertical-align: bottom;
+}
+a {
+	color: #666666;
+}
+a:hover {
+	color: #f20524;
+}
+header h1 {
+	margin: 0 0 21px 0;
+	padding-top: 27px;
+	text-align: center;
+}
+header h1 a {
+	display: inline-block;
+}
+#topicpath {
+	margin-bottom: 30px;
+}
+#topicpath ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#topicpath ol li {
+	display: inline;
+	margin-right: 5px;
+}
+#topicpath ol li a {
+	padding-right: 15px;
+}
+#contents {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.btn_field {
+	margin-bottom: 30px;
+}
+.btn_field dt img {
+	margin-bottom: 6px;
+}
+.btn_field a {
+	text-decoration: none;
+}
+.btn_field p, .btn_field dl, .btn_field dt, .btn_field dd {
+	margin: 0;
+}
+.btn_field dd {
+	text-align: center;
+}
+#pagetop {
+	margin-bottom: 0;
+	float: right;
+}
+#pagetop a {
+	display: block;
+	min-height: 16px;
+	padding: 6px 0 6px 28px;
+	background-image: url(../images/pagetop.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+footer #info_field {
+	min-height: 42px;
+	padding: 15px 0 7px 0;
+	clear: right;
+	background-image: url(../images/footer_top.png), url(../images/footer_bottom.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: left top, left bottom;
+}
+address {
+	font-style: normal;
+	text-align: center;
+}
+#copyright {
+	text-align: center;
+	margin-bottom: 0;
+}
+#copyright small {
+	font-size: 100%;
+}
+#main h2 {
+	margin: 0 0 20px 0;
+	padding: 5px 0 0 20px;
+	background-image: url(../images/h2.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-size: 150%;
+}
+#pickup_field {
+	width: 840px;
+	height: 404px;
+	margin: 0 auto 30px auto;
+}
+#pickup_field ul {
+	list-style: none;
+	padding-left: 0;
+	overflow: hidden;
+}
+#pickup_field ul li {
+	display: none;
+	position: absolute;
+}
+#pickup_field ul li.now {
+	display: block;
+}
+#topics ul li time {
+	display: inline-block;
+	width: 9.3em;
+	font-weight: bold;
+	text-indent: 0;
+}
+sec_field p:last-child {
+	margin-bottom: 0;
+}
+.pic_left {
+	margin: 0 30px 10px 0;
+	float: left;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table caption {
+	overflow: hidden;
+	text-align: left;
+}
+table caption p {
+	margin-bottom: 30px;
+}
+table th, table td {
+	padding: 15px;
+	border: 1px solid #775644;
+}
+table tr th:first-child {
+	width: 30%;
+}
+table tr td:nth-child(2) {
+	width: 45%;
+}
+table tr td:last-child {
+	text-align: center;
+}
+.pic_field {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.pic_field:last-of-type {
+	margin-bottom: 0;
+}
+form p {
+	margin-bottom: 30px;
+}
+form p:last-child {
+	margin-bottom: 0;
+}
+input, textarea {
+	margin-top: 7px;
+}
+select {
+	width: 75px;
+}
+textarea {
+	width: 300px;
+	height: 140px;
+	overflow-y: scroll;
+}
