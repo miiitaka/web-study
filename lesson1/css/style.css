@@ -1,25 +1,29 @@
 ﻿@charset "utf-8";
 
-/* 基本レイアウト ここから↓ */
+body {
+  background: url(../images/bg.jpg) repeat-x center top;
+  color: #666666;
+}
 
-/* 基本レイアウト ここまで↑ */
+header,
+footer,
+.nav-global,
+.nav-breadcrumb,
+.contents {
+  margin: 0 auto;
+  width: 860px;
+}
 
-/* トップページ ここから↓ */
+header h1 {
+  margin: 0 0 26px;
+  padding-top: 18px;
+  text-align: center;
+}
 
-/* トップページ ここまで↑ */
-
-/* 「動物園について」ページ ここから↓ */
-
-/* 「動物園について」ページ ここまで↑ */
-
-/* 「ガイドのご案内」ページ ここから↓ */
-
-/* 「ガイドのご案内」ページ ここまで↑ */
-
-/* 「人気の動物たち」ページ ここから↓ */
-
-/* 「人気の動物たち」ページ ここまで↑ */
-
-/* 「お問い合わせ」ページ ここから↓ */
-
-/* 「お問い合わせ」ページ ここまで↑ */
+.nav-global ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0 20px;
+  padding-left: 0;
+}
