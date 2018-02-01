@@ -27,3 +27,27 @@ header h1 {
   margin: 0 0 20px;
   padding-left: 0;
 }
+
+.nav-global a {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 60px;
+  width: 215px;
+}
+
+.nav-global li:nth-child(1) a {
+  background: url(../images/nav1.png);
+}
+
+.nav-global li:nth-child(2) a {
+  background: url(../images/nav2.png);
+}
+
+.nav-global li:nth-child(3) a {
+  background: url(../images/nav3.png);
+}
+
+.nav-global li:nth-child(4) a {
+  background: url(../images/nav4.png);
+}
