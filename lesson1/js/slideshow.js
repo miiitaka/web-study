@@ -27,6 +27,6 @@ jQuery(function ($) {
 		});
 	}
 	if (max_image > 1) {
-		setInterval(changeImage, 4000);
+		setInterval(changeImage, 1000);
 	}
 });

@@ -36,18 +36,50 @@ header h1 {
   width: 215px;
 }
 
+.nav-global a:hover {
+  background-position: 0 -60px;
+}
+
 .nav-global li:nth-child(1) a {
-  background: url(../images/nav1.png);
+  background-image: url(../images/nav1.png);
 }
 
 .nav-global li:nth-child(2) a {
-  background: url(../images/nav2.png);
+  background-image: url(../images/nav2.png);
 }
 
 .nav-global li:nth-child(3) a {
-  background: url(../images/nav3.png);
+  background-image: url(../images/nav3.png);
 }
 
 .nav-global li:nth-child(4) a {
-  background: url(../images/nav4.png);
+  background-image: url(../images/nav4.png);
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  background: #fff;
+  padding: 20px;
+  width: 550px;
+}
+
+.contents-sub {
+  width: 240px;
+}
+
+footer {
+  padding-top: 10px;
+}
+
+main h1 {
+  background-image: url(../images/bg_h1_left.png), url(../images/bg_h1_bottom.gif);
+  background-repeat: no-repeat, repeat-x;
+  background-position: right top, left bottom;
+  font-size: 180%;
+  margin-bottom: 30px;
+  padding: 0 40px 20px 10px;
 }
