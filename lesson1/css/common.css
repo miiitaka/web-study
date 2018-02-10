@@ -79,7 +79,7 @@ address {
 	font-style: normal;
 	text-align: center;
 }
-#copyright { 
+#copyright {
 	text-align: center;
 }
 #copyright small {
@@ -111,7 +111,7 @@ address {
 #graphic ul li.now {
 	display: block;
 }
-#news ul li time {
+.contents-news li time {
 	display: inline-block;
 	width: 160px;
 	font-weight: bold;
