@@ -94,3 +94,19 @@ main h1 {
   padding: 20px 0 20px 160px;
   text-indent: -160px;
 }
+
+.about_area {
+  margin-bottom: 30px;
+}
+
+.about_area:last-child {
+  margin-bottom: 0;
+}
+
+table thead tr th {
+  background-color: #ffdd63;
+}
+
+table tbody tr:nth-child(odd) td {
+  background-color: #eef8fa;
+}
