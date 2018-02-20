@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>動物園について：ZOO LOGICAL</title>
+<title>お問い合わせ：ZOO LOGICAL</title>
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,14 +27,50 @@
   <nav class="nav-breadcrumb">
     <ol>
       <li><a href="index.html">ホーム</a></li>
-      <li>動物園について</li>
+      <li>お問い合わせ</li>
     </ol>
   </nav>
 
   <div class="contents">
     <main>
       <article>
-        <h1>動物園について</h1>
+        <h1>お問い合わせ</h1>
+
+        <p>
+          環境学習のご相談や動物に関する疑問など、お気軽にお問い合わせください。
+        </p>
+
+        <ul>
+          <li>必要事項を記入し、「確認する」をクリックしてください。</li>
+          <li>ご記入いただいた個人情報穂は、お問い合わせの回答以外には使用しません。</li>
+        </ul>
+
+        <form action="#">
+          <p>
+            <label for="name">お名前（必須）</label><br>
+            <input type="text" id="name" name="name" autofocus required>
+          </p>
+
+          <p>
+            <label for="mail">メールアドレス（必須）</label><br>
+            <input type="email" id="mail" name="mail" required>
+          </p>
+
+          <p>
+            お問い合わせ種類<br>
+            <input type="radio" id="kind0" name="kind" value="0" checked><label for="kind0">環境学習に関すること</label>
+            <input type="radio" id="kind1" name="kind" value="1"><label for="kind1">その他</label>
+          </p>
+
+          <p>
+            <label for="message">お問い合わせ内容</label><br>
+            <textarea id="message" name="message"></textarea>
+          </p>
+
+          <p>
+            <input type="submit" value="確認する">
+          </p>
+        </form>
       </article>
     </main>
 
