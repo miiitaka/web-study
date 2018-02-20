@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 
 body {
   background: url(../images/bg.jpg) repeat-x center top;
@@ -123,4 +123,12 @@ table tbody tr:nth-child(odd) td {
   justify-content: space-between;
   margin: 0 0 15px;
   width: 265px;
+}
+
+input[type=text] {
+  width: 200px;
+}
+
+input[type=email] {
+  width: 300px;
 }
