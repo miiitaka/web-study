@@ -5,6 +5,14 @@
 <title>動物園について：ZOO LOGICAL</title>
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $("#pagetop").on("click",function(){
+      $("html, body").animate({scrollTop: 0}, 100);
+    });
+  });
+</script>
 </head>
 <body>
   <header>
@@ -26,7 +34,7 @@
 
   <nav class="nav-breadcrumb">
     <ol>
-      <li><a href="index.html">ホーム</a></li>
+      <li><a href="index.html">ZOO LOGICAL</a></li>
       <li>動物園について</li>
     </ol>
   </nav>
@@ -81,15 +89,13 @@
   </div>
 
   <footer>
-    <p><a href="#top">ページの先頭に戻る</a></p>
+    <p class="pagetop"><nav id="pagetop">ページの先頭に戻る</nav></p>
     <address>
       山梨県富士吉田市X-X-X
       電話 <a href="tel:0120-xxx-xxx">0120-xxx-xxx</a>
       営業時間 9:00〜17:00（休園日：月曜日、年末年始）
     </address>
-    <p>
-      <small>Copyright 2014 ZOO LOGICAL All rights reserved.</small>
-    </p>
+    <small>Copyright 2014 ZOO LOGICAL All rights reserved.</small>
   </footer>
 </body>
 </html>

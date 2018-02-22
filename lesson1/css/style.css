@@ -132,3 +132,9 @@ input[type=text] {
 input[type=email] {
   width: 300px;
 }
+
+footer small{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
