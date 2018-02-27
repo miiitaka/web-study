@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>スライドショー</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      var now = 1;
+      var count = $("ul li").length - 1;
+      var fade = 1500;
+      var speed = 3000
+
+        $("ul li").eq(now).show();
+
+      function setSlide(){
+        $("ul li").eq(now).fadeOut(fade);
+
+        if (now === count){
+          now = 0;
+        } else{
+          now++;
+        }
+
+        $("ul li").eq(now).fadeIn(fade);
+      }
+
+      setInterval(setSlide, speed);
+    });
+  </script>
+  <style>
+    ul{
+      position: relative;
+    }
+    li{
+      display: none;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><img src="graphic1.png"></li>
+    <li><img src="graphic2.png"></li>
+    <li><img src="graphic3.png"></li>
+  </ul>
+</body>
+</html>
