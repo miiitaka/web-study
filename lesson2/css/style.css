@@ -1,25 +1,75 @@
 ﻿@charset "utf-8";
 
-/* 基本レイアウト ここから↓ */
+body {
+  line-height: 1.4em;
+}
 
-/* 基本レイアウト ここまで↑ */
+header,
+nav,
+.contents,
+footer {
+  margin: 0 auto;
+  width: 830px;
+}
 
-/* トップページ ここから↓ */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+}
 
-/* トップページ ここまで↑ */
+nav ul li {
+  width: 200px;
+}
 
-/* 「当病院について」ページ ここから↓ */
+nav ul li a {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 70px;
+}
 
-/* 「当病院について」ページ ここまで↑ */
+nav ul li:nth-child(1) a {
+  background-image: url(../images/global_nav1.png);
+}
 
-/* 「診療科のご案内」ページ ここから↓ */
+nav ul li:nth-child(2) a {
+  background-image: url(../images/global_nav2.png);
+}
 
-/* 「診療科のご案内」ページ ここまで↑ */
+nav ul li:nth-child(3) a {
+  background-image: url(../images/global_nav3.png);
+}
 
-/* 「施設紹介」ページ ここから↓ */
+nav ul li:nth-child(4) a {
+  background-image: url(../images/global_nav4.png);
+}
 
-/* 「施設紹介」ページ ここまで↑ */
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
 
-/* 「お問い合わせ」ページ ここから↓ */
+main {
+  width: 570px;
+}
 
-/* 「お問い合わせ」ページ ここまで↑ */
+.contents-sub {
+  width: 220px;
+}
+
+footer nav {
+  text-align: right;
+}
+
+main h1 {
+  background-image: url(../images/back_h1_bottom.png), url(../images/back_h1_top.png);
+  background-position: left bottom, left top;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 180%;
+  margin: 0 0 30px;
+  padding: 30px 0;
+  text-align: center;
+}
