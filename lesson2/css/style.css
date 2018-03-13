@@ -46,6 +46,10 @@ nav ul li:nth-child(4) a {
   background-image: url(../images/global_nav4.png);
 }
 
+nav ul li a:hover {
+  background-position: 0 -70px;
+}
+
 .contents {
   display: flex;
   justify-content: space-between;
@@ -72,4 +76,17 @@ main h1 {
   margin: 0 0 30px;
   padding: 30px 0;
   text-align: center;
+}
+
+.topics ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.topics ul li {
+  border-bottom: dotted 1px #333;
+  margin-top: 20px;
+  padding: 0 10px 20px 160px;
+  text-indent: -160px;
 }
