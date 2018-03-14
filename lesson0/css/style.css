@@ -1,0 +1,26 @@
+body {
+  background-color: #ffde2a;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 20px;
+  width: 600px;
+}
+
+h1{
+  border-bottom: 5px solid #f30;
+  font-size: 40px;
+  text-align: center;
+}
+
+blockquote{
+  background-color: #eee;
+  margin: 0;
+  padding: 20px 30px;
+}
