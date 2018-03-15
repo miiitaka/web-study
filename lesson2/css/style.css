@@ -90,3 +90,11 @@ main h1 {
   padding: 0 10px 20px 160px;
   text-indent: -160px;
 }
+
+.contents-policy section {
+  margin-top: 20px;
+}
+
+.contents-policy section:last-child {
+  margin-bottom: 10px;
+}
