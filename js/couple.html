@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function(){
+
+  $('#couple').on('click', function(){
+    var team_A       = ['A','B','C','D','E'],
+        team_B       = ['A','B','C','D','E'],
+        Array_length = team_A.length,
+        max,
+        random_number_A,
+        random_number_B,
+        table_cell,
+        i;
+
+    for(i = 0; i < Array_length; i++) {
+      max = team_A.length;
+      random_number_A = Math.floor( Math.random() * max );
+      random_number_B = Math.floor( Math.random() * max );
+
+      table_cell += '<tr>';
+      table_cell += '<td>' + team_A[random_number_A] + '</td>';
+      table_cell += '<td>' + team_B[random_number_B] + '</td>';
+      table_cell += '</tr>';
+
+      team_A.splice(random_number_A, 1);
+      team_B.splice(random_number_B, 1);
+    }
+
+    $('tbody').html('tbody' + table_cell + '</tbody>');
+  });
+});
+</script>
+<style>
+body {
+  font-size: 20px;
+  margin: 20px auto;
+  width: 800px;
+}
+
+.button {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button button {
+  font-size: 20px;
+}
+
+table {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+}
+
+thead tr {
+  background-color: #f5ff70;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="button">
+    <button id="couple">組み見合わせ抽選を行う</button>
+  </div>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>チームA</th>
+        <th>チームB</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+  </table>
+</body>
+</html>
