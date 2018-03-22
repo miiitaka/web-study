@@ -118,3 +118,9 @@ table tbody tr:nth-child(even) {
   margin: 0;
   width: 178px;
 }
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  border: 1px solid #666;
+}
