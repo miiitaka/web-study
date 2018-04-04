@@ -25,15 +25,15 @@ header h1 a {
 header h1 a img {
 	vertical-align: bottom;
 }
-#path ol {
+.nav-breadcrumb ol {
 	list-style-type: none;
 	padding: 0;
 }
-#path ol li {
+.nav-breadcrumb ol li {
 	display: inline;
 	margin-right: 5px;
 }
-#path ol li a {
+.nav-breadcrumb ol li a {
 	padding-right: 15px;
 	background-image: url(../images/path_arrow.png);
 	background-repeat: no-repeat;
@@ -58,11 +58,11 @@ header h1 a img {
 .bnr_area p img {
 	vertical-align:text-bottom;
 }
-#pagetop {
+.pagetop {
 	margin-bottom: 0;
 	float: right;
 }
-#pagetop a {
+.pagetop a {
 	display: block;
 	min-height: 16px;
 	padding: 6px 0 6px 28px;
@@ -79,10 +79,10 @@ address {
 	font-style: normal;
 	text-align: center;
 }
-#copyright { 
+.copyright {
 	text-align: center;
 }
-#copyright small {
+.copyright small {
 	font-size: 100%;
 }
 #main h2 {

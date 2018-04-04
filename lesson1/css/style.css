@@ -1,6 +1,87 @@
 ﻿@charset "utf-8";
 
 body {
-  background: url(../images/bg.jpg) repeat-x center top;
+  background-image: url(../images/bg.jpg);
+  background-position: center top;
+  background-repeat: repeat-x;
   color: #666;
+}
+
+header,
+.nav-global,
+.nav-breadcrumb,
+.contents,
+footer {
+  margin: 0 auto;
+  width: 860px;
+}
+
+header h1 {
+  margin: 0 0 26px;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.nav-global ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0 20px;
+  padding-left: 0;
+}
+
+.nav-global a {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 60px;
+  width: 215px;
+}
+
+.nav-global a:hover {
+  background-position: 0 -60px;
+}
+
+.nav-global li:nth-child(1) a {
+  background-image: url(../images/nav1.png);
+}
+
+.nav-global li:nth-child(2) a {
+  background-image: url(../images/nav2.png);
+}
+
+.nav-global li:nth-child(3) a {
+  background-image: url(../images/nav3.png);
+}
+
+.nav-global li:nth-child(4) a {
+  background-image: url(../images/nav4.png);
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  width: 550px;
+}
+
+.sub {
+  width: 240px;
+}
+
+footer {
+  padding-top: 10px;
+}
+
+main h1 {
+  background-image: url(../images/bg_h1_left.png), url(../images/bg_h1_bottom.gif);
+  background-position: right top, left bottom;
+  background-repeat: no-repeat, repeat-x;
+  font-size: 180%;
+  margin-bottom: 30px;
+  padding: 0 40px 20px 10px;
 }
