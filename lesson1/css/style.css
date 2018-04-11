@@ -85,3 +85,22 @@ main h1 {
   margin-bottom: 30px;
   padding: 0 40px 20px 10px;
 }
+
+.contents-news {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contents-news li {
+  border-bottom: 1px dotted #fb484e;
+  padding: 20px 0 20px 160px;
+  text-indent: -160px;
+}
+
+.about_area {
+  margin-bottom: 30px;
+}
+
+.about_area:last-child {
+  margin-bottom: 0;
+}
