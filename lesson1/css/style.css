@@ -104,3 +104,28 @@ main h1 {
 .about_area:last-child {
   margin-bottom: 0;
 }
+
+table thead tr th {
+  background-color: #ffdd63;
+}
+
+table tbody tr:nth-child(even) td {
+  background-color: #eef8fa;
+}
+
+.animals_area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.animals_area figure {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  width: 265px;
+}
+
+.animals_area figure img {
+  height: 83px;
+  width: 100px;
+}
