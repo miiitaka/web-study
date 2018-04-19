@@ -1,25 +1,152 @@
 ﻿@charset "utf-8";
 
-/* 基本レイアウト ここから↓ */
+body {
+  line-height: 150%;
+}
 
-/* 基本レイアウト ここまで↑ */
+header,
+.nav-global,
+.nav-breadcrumb,
+.contents,
+footer {
+  margin: 0 auto;
+  width: 840px;
+}
 
-/* トップページ ここから↓ */
+.nav-global {
+  margin-bottom: 15px;
+}
 
-/* トップページ ここまで↑ */
+.nav-global ul {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
 
-/* 「展覧会について」ページ ここから↓ */
+.nav-global ul li {
+  width: 210px;
+}
 
-/* 「展覧会について」ページ ここまで↑ */
+.nav-global ul li a {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 64px;
+}
 
-/* 「スケジュール」ページ ここから↓ */
+.nav-global ul li:nth-child(1) a {
+  background-image: url(../images/btn_navigation1.png);
+}
 
-/* 「スケジュール」ページ ここまで↑ */
+.nav-global ul li:nth-child(2) a {
+  background-image: url(../images/btn_navigation2.png);
+}
 
-/* 「作品紹介」ページ ここから↓ */
+.nav-global ul li:nth-child(3) a {
+  background-image: url(../images/btn_navigation3.png);
+}
 
-/* 「作品紹介」ページ ここまで↑ */
+.nav-global ul li:nth-child(4) a {
+  background-image: url(../images/btn_navigation4.png);
+}
 
-/* 「前売り券申し込み」ページ ここから↓ */
+.nav-global ul li a:hover {
+  background-position: 0 -64px;
+}
 
-/* 「前売り券申し込み」ページ ここまで↑ */
+.contents {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+main {
+  width: 610px;
+}
+
+main h1 {
+  background-image: url(../images/h1_top.png), url(../images/h1_bottom.png);
+  background-position: center top, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  font-size: 175%;
+  margin: 0 0 30px;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.contents-sub, .contents-sub nav {
+  width: 200px;
+}
+
+.contents-sub nav figure {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.topics ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.topics ul li {
+  border-bottom: 1px dotted #666;
+  margin-top: 1.5em;
+  padding: 0 0 1.5em 9.3em;
+  text-indent: -9.3em;
+}
+
+.pagetop {
+  cursor: pointer;
+}
+
+.sec_field:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+table caption {
+  margin-bottom: 20px;
+}
+
+table thead tr {
+  background: #333;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.gallery-contents {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.gallery-contents li {
+  margin-bottom: 20px;
+  width: 290px;
+}
+
+.gallery-contents li figure {
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+input[required] {
+   background-color: #fcc;
+   width: 250px;
+}

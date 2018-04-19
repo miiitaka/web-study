@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>展覧会について｜日本の景色写真展</title>
+<title>作品紹介｜日本の景色写真展</title>
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/pageTop.js"></script>
+<script src="js/jquery.pageTop.js"></script>
 </head>
 
 <body>
@@ -29,15 +29,42 @@
 
   <nav class="nav-breadcrumb">
     <ol>
-      <li><a href="index.html">日本の景色写真展</a>&gt;</li>
-      <li>展覧会について</li>
+      <li><a href="index.html">日本の景色写真展</a></li>
+      <li>作品紹介</li>
     </ol>
   </nav>
 
   <div class="contents">
     <main>
       <article>
-        <h1>展覧会について</h1>
+        <h1>作品紹介</h1>
+        <p>
+          日本の景色写真展では、富士山や桜並木といった世界に
+          誇れる日本の景色の写真をはじめ、日本の伝統行事や田舎に残る
+          自然などの心に残る景色の写真を多く展示しております。
+        </p>
+        <ul class="gallery-contents">
+          <li>
+            <figure>
+              <img src="images/pic_gallery1.jpg" width="290" height="199" alt="遠くに映る富士山">
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="images/pic_gallery2.jpg" width="290" height="198" alt="奥まで続いている桜並木と渋滞">
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="images/pic_gallery3.jpg" width="290" height="199" alt="笹につけられた沢山の短冊">
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="images/pic_gallery4.jpg" width="290" height="198" alt="紫陽花越しに見る棚田風景">
+            </figure>
+          </li>
+        </ul>
       </article>
     </main>
 
@@ -52,10 +79,10 @@
         <figure>
           <a href="tickets.html">
             <img src="images/btn_tickets.jpg" width="200" height="84" alt="前売り券申し込み">
-            <figcaption>
-              前売り券好評発売中
-            </figcaption>
           </a>
+          <figcaption>
+            前売り券好評発売中
+          </figcaption>
         </figure>
       </nav>
     </section>
@@ -73,5 +100,9 @@
       </small>
     </div>
   </footer>
+
+  <script>
+    $('#pageTop').pageTop({speed: 500});
+  </script>
 </body>
 </html>

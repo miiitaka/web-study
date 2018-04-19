@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>日本の景色写真展</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css" media="screen and (max-width:480px)">
+<link rel="stylesheet" href="css/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script src="js/jquery.pageTop.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="index.html">
+        <img src="images/logo.gif" width="258" height="64" alt="日本の景色写真展">
+      </a>
+    </h1>
+  </header>
+
+  <nav class="nav-global">
+    <ul>
+      <li><a href="introduction.html">展覧会について</a></li>
+      <li><a href="schedule.html">スケジュール</a></li>
+      <li><a href="gallery.html">作品紹介</a></li>
+      <li><a href="tickets.html">前売り券申し込み</a></li>
+    </ul>
+  </nav>
+
+  <nav id="pickup_field">
+    <ul class="bxslider">
+      <li class="now">
+        <img src="images/pickup1.jpg" alt="「企画展覧会。日本X写真。開催期間2015年8月28日より東京、大阪、福岡、名古屋、仙台巡業」" id="pickup1">
+      </li>
+      <li>
+        <img src="images/pickup2.jpg" alt="全国から集まった写真、約200点展示" id="pickup2">
+      </li>
+      <li>
+        <img src="images/pickup3.jpg" alt="壁に風景写真が3点掛けられている" id="pickup3">
+      </li>
+    </ul>
+  </nav>
+
+  <div class="contents">
+    <main>
+      <section class="topics">
+        <h2>トピックス</h2>
+
+        <ul>
+          <li>
+            <time datetime="2015-09-20">2015年09月20日</time>
+            総入場者数が1万人を突破いたしました。
+          </li>
+          <li>
+            <time datetime="2015-09-18">2015年09月18日</time>
+            大阪会場で展覧会がスタートいたしました。
+            たくさんの皆様のご来場をお待ちしております。
+          </li>
+          <li>
+            <time datetime="2015-09-13">2015年09月13日</time>
+            9月下旬に大阪会場で写真家5名によるギャラリートークを開催いたします。
+            詳しい日程は決まり次第お知らせいたします。
+          </li>
+          <li>
+            <time datetime="2015-09-10">2015年09月10日</time>
+            東京会場は終了いたしました。
+            たくさんの皆様のご来場ありがとうございました。
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <section class="contents-sub">
+      <nav>
+        <figure>
+          <a href="gallery.html">
+            <img src="images/btn_gallery.jpg" width="200" height="114" alt="作品紹介">
+          </a>
+        </figure>
+
+        <figure>
+          <a href="tickets.html">
+            <img src="images/btn_tickets.jpg" width="200" height="84" alt="前売り券申し込み">
+          </a>
+          <figcaption>
+            前売り券好評発売中
+          </figcaption>
+        </figure>
+      </nav>
+    </section>
+  </div>
+
+  <footer>
+    <nav id="pageTop" class="pagetop">ページの先頭へ戻る</nav>
+    <div class="footer-contents">
+      <address>
+        電話 <a href="tel:0120XXX001">0120-XXX-001</a>
+        FAX <a href="tel:0120XXX002">0120-XXX-002</a>
+      </address>
+      <small>
+        Copyright 2015 日本の景色写真展 All rights reserved.
+      </small>
+    </div>
+  </footer>
+
+  <script>
+    $('.bxslider').find('li').show();
+    $('.bxslider').bxSlider({
+      mode: 'horizontal',
+      auto: true,
+      speed: 1000,
+      pause: 4000
+    });
+    $('#pageTop').pageTop({speed: 500});
+  </script>
+</body>
+</html>

@@ -27,22 +27,25 @@ header h1 {
 header h1 a {
 	display: inline-block;
 }
-#topicpath {
+nav.nav-breadcrumb {
 	margin-bottom: 30px;
 }
-#topicpath ol {
+.nav-breadcrumb ol {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-#topicpath ol li {
+.nav-breadcrumb ol li {
 	display: inline;
 	margin-right: 5px;
 }
-#topicpath ol li a {
+.nav-breadcrumb ol li:first-of-type::after {
+	content: '>';
+}
+.nav-breadcrumb ol li a {
 	padding-right: 15px;
 }
-#contents {
+.contents {
 	margin-bottom: 30px;
 	overflow: hidden;
 }
@@ -61,38 +64,33 @@ header h1 a {
 .btn_field dd {
 	text-align: center;
 }
-#pagetop {
-	margin-bottom: 0;
+.pagetop {
+	display: inline-block;
 	float: right;
-}
-#pagetop a {
-	display: block;
+	margin-bottom: 0;
 	min-height: 16px;
 	padding: 6px 0 6px 28px;
 	background-image: url(../images/pagetop.gif);
 	background-repeat: no-repeat;
 	background-position: left center;
 }
-footer #info_field {
+footer .footer-contents {
 	min-height: 42px;
 	padding: 15px 0 7px 0;
 	clear: right;
 	background-image: url(../images/footer_top.png), url(../images/footer_bottom.png);
 	background-repeat: no-repeat, no-repeat;
 	background-position: left top, left bottom;
+	text-align: center;
 }
 address {
 	font-style: normal;
 	text-align: center;
 }
-#copyright {
-	text-align: center;
+small {
 	margin-bottom: 0;
 }
-#copyright small {
-	font-size: 100%;
-}
-#main h2 {
+main h2 {
 	margin: 0 0 20px 0;
 	padding: 5px 0 0 20px;
 	background-image: url(../images/h2.gif);
@@ -117,7 +115,7 @@ address {
 #pickup_field ul li.now {
 	display: block;
 }
-#topics ul li time {
+.topics ul li time {
 	display: inline-block;
 	width: 9.3em;
 	font-weight: bold;
