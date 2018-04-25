@@ -129,3 +129,11 @@ table tbody tr:nth-child(even) td {
   height: 83px;
   width: 100px;
 }
+
+input[type=text] {
+  width: 200px;
+}
+
+input[type=email] {
+  width: 300px;
+}
