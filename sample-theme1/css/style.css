@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+body {
+  background: url(../images/bg.jpg) repeat-x center top;
+  color: #666666;
+}
+
+header,
+footer,
+.nav-global,
+.nav-breadcrumb,
+.contents {
+  margin: 0 auto;
+  width: 860px;
+}
+
+header h1 {
+  margin: 0 0 26px;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.nav-global ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0 20px;
+  padding-left: 0;
+}
+
+.nav-global a {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 60px;
+  width: 215px;
+}
+
+.nav-global a:hover {
+  background-position: 0 -60px;
+}
+
+.nav-global li:nth-child(1) a {
+  background-image: url(../images/nav1.png);
+}
+
+.nav-global li:nth-child(2) a {
+  background-image: url(../images/nav2.png);
+}
+
+.nav-global li:nth-child(3) a {
+  background-image: url(../images/nav3.png);
+}
+
+.nav-global li:nth-child(4) a {
+  background-image: url(../images/nav4.png);
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  background: #fff;
+  padding: 20px;
+  width: 550px;
+}
+
+.contents-sub {
+  width: 240px;
+}
+
+footer {
+  padding-top: 10px;
+}
+
+main h1 {
+  background-image: url(../images/bg_h1_left.png), url(../images/bg_h1_bottom.gif);
+  background-repeat: no-repeat, repeat-x;
+  background-position: right top, left bottom;
+  font-size: 180%;
+  margin-bottom: 30px;
+  padding: 0 40px 20px 10px;
+}
+
+.contents-news {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contents-news li {
+  border-bottom: 1px dotted #fb484e;
+  padding: 20px 0 20px 160px;
+  text-indent: -160px;
+}
+
+.about_area {
+  margin-bottom: 30px;
+}
+
+.about_area:last-child {
+  margin-bottom: 0;
+}
+
+table thead tr th {
+  background-color: #ffdd63;
+}
+
+table tbody tr:nth-child(odd) td {
+  background-color: #eef8fa;
+}
+
+.animals_area {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.animals_area figure {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
+  width: 265px;
+}
+
+input[type=text] {
+  width: 200px;
+}
+
+input[type=email] {
+  width: 300px;
+}
+
+footer small{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}

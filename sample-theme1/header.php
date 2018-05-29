@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="UTF-8">
-<title>ZOO LOGICAL</title>
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css" media="screen and (max-width: 480px)">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<?php wp_head(); ?>
 </head>
 <body>
   <header>
