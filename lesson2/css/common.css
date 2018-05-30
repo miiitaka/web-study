@@ -25,17 +25,17 @@ header h1 {
 	padding-top: 18px;
 	text-align: left;
 }
-#level ul {
+.breadcrumb ol {
 	list-style-type: none;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	padding: 0;
 }
-#level ul li {
+.breadcrumb ol li {
 	display: inline;
 	margin-right: 5px;
 }
-#level ul li a {
+.breadcrumb ol li a {
 	padding-right: 10px;
 }
 #contents {
@@ -65,7 +65,7 @@ footer #pagetop a {
 	background-repeat: no-repeat;
 	background-position: left center;
 }
-footer #info_group  {
+footer .info_group  {
 	padding-top: 15px;
 	padding-bottom: 10px;
 	background-image: url(../images/back_footer.png);
@@ -73,17 +73,17 @@ footer #info_group  {
 	color: #ffffff;
 	text-align: center;
 }
-footer #info_group address {
+footer .info_group address {
 	font-style: normal;
 }
-footer #info_group p {
+footer .info_group p {
 	margin-bottom: 0;
 	text-align: center;
 }
-footer #info_group p small {
+footer .info_group p small {
 	font-size: 100%;
 }
-#main h2 {
+main h2 {
 	margin-top: 0;
 	margin-bottom: 20px;
 	padding: 5px 10px 15px 10px;
