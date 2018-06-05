@@ -5,26 +5,33 @@
 <?php wp_head(); ?>
 </head>
 <body>
-  <header>
-    <h1>
-      <a href="index.html">
-				<?php
+	<header>
+		<h1>
+			<?php
+			if ( has_custom_logo() ) {
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
-				$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-				$format = '<img src="' . $image[0] . '"';
-				$format .= ' width="' . $image[1] . '"';
-				$format .= ' height="' . $image[2] . '"';
-				$format .= ' alt="' . esc_attr( get_bloginfo( 'name' )) . '">';
+				$image   = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+				$format  = '<a href="'  . esc_url( home_url( '/' ) ) . '">';
+				$format .= '<img src="' . $image[0] . '"';
+				$format .= ' width="'   . $image[1] . '"';
+				$format .= ' height="'  . $image[2] . '"';
+				$format .= ' alt="'     . esc_attr( get_bloginfo( 'name' )) . '">';
+				$format .= '</a>';
 				echo $format;
-				?>
-      </a>
-    </h1>
-  </header>
+			}
+			?>
+		</h1>
+	</header>
 
-  <nav class="nav-global">
-		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'primary'
-		) );
-		?>
-  </nav>
+	<?php if ( has_nav_menu( 'global' ) ) : ?>
+		<nav class="nav-global">
+			<?php
+			$args = array(
+				'container'      => '',
+				'theme_location' => 'global',
+				'items_wrap'      => '<ul>%3$s</ul>'
+			);
+			wp_nav_menu( $args );
+			?>
+		</nav>
+	<?php endif;

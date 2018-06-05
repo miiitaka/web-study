@@ -12,25 +12,8 @@ function theme_setup() {
 	);
 	add_theme_support( 'custom-logo', $args );
 
-	$args = array(
-		'default-image'          => '',
-		'random-default'         => true,
-		'width'                  => 0,
-		'height'                 => 0,
-		'flex-height'            => true,
-		'flex-width'             => true,
-		'default-text-color'     => '',
-		'header-text'            => true,
-		'uploads'                => true,
-		'video'                  => true,
-		'wp-head-callback'       => '__return_false',
-		'admin-head-callback'    => '__return_false',
-		'admin-preview-callback' => '__return_false',
-	);
-	add_theme_support( 'custom-header', $args );
-
 	register_nav_menus( array(
-		'primary' => 'Primary Menu'
+		'global' => 'Global Menu'
 	) );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
