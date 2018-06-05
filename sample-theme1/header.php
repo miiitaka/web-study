@@ -8,16 +8,23 @@
   <header>
     <h1>
       <a href="index.html">
-        <img src="images/logo.png" width="244" height="76" alt="ZOO LOGICAL">
+				<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+				$format = '<img src="' . $image[0] . '"';
+				$format .= ' width="' . $image[1] . '"';
+				$format .= ' height="' . $image[2] . '"';
+				$format .= ' alt="' . esc_attr( get_bloginfo( 'name' )) . '">';
+				echo $format;
+				?>
       </a>
     </h1>
   </header>
 
   <nav class="nav-global">
-    <ul>
-      <li><a href="about.html">動物園について</a></li>
-      <li><a href="guide.html">ガイドのご案内</a></li>
-      <li><a href="animals.html">人気の動物たち</a></li>
-      <li><a href="contact.html">お問い合わせ</a></li>
-    </ul>
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'primary'
+		) );
+		?>
   </nav>
