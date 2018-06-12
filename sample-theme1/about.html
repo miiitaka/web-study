@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>動物園について：ZOO LOGICAL</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $("#pagetop").on("click",function(){
+      $("html, body").animate({scrollTop: 0}, 100);
+    });
+  });
+</script>
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="index.html">
+        <img src="images/logo.png" width="244" height="76" alt="ZOO LOGICAL">
+      </a>
+    </h1>
+  </header>
+
+  <nav class="nav-global">
+    <ul>
+      <li><a href="about.html">動物園について</a></li>
+      <li><a href="guide.html">ガイドのご案内</a></li>
+      <li><a href="animals.html">人気の動物たち</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav-breadcrumb">
+    <ol>
+      <li><a href="index.html">ZOO LOGICAL</a></li>
+      <li>動物園について</li>
+    </ol>
+  </nav>
+
+  <div class="contents">
+    <main>
+      <article>
+        <h1>動物園について</h1>
+        <section class="about_area">
+          <h2>ZOO LOGICALとは</h2>
+          <p>
+            <img src="images/about_photo1.jpg" alt="" class="photo_right">
+            ZOO LOGICALは大きな池と緑豊かな森に囲まれた、人も動物も大自然の中でゆっくりとできる動物園です。
+          </p>
+          <p>
+            来園者の皆様に動物を見て楽しんでいただくだけでなく、
+            動物の生態や自然環境などにも理解を深めていただくため、
+            長年培った飼育方法や生態研究の結果なども公開するよう取り組んでいます。<br>
+            環境学習のため、動物や自然に関する出張講座も受け付けております。
+            お問い合わせフォームよりご相談ください。
+          </p>
+          <p>
+            動物と親しむため、知るため、ぜひ当園をご利用ください。
+          </p>
+        </section>
+
+        <section class="about_area">
+          <h2>動物たちとのふれあい</h2>
+          <p>
+            <img src="images/about_photo2.jpg" alt="" class="photo_right">
+            通常の動物展示だけではなく、動物たちとふれあえる広場もあり、
+            小さいお子様から大人まで楽しめるスポットになっています。
+          </p>
+          <p>
+            ここにいる動物たちは好奇心旺盛で人懐っこいため、初めての方でも自然に動物とともだちになれるでしょう。
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <section class="contents-sub">
+      <nav>
+        <a href="guide.html">
+          <img src="images/bnr_guide.png" alt="ガイドのご案内" width="240" height="100">
+        </a>
+        <span>飼育員が動物たちをご紹介</span>
+        <a href="contact.html">
+          <img src="images/bnr_contact.png" alt="お問い合わせ" width="240" height="60">
+        </a>
+      </nav>
+    </section>
+  </div>
+
+  <footer>
+    <p class="pagetop"><nav id="pagetop">ページの先頭に戻る</nav></p>
+    <address>
+      山梨県富士吉田市X-X-X
+      電話 <a href="tel:0120-xxx-xxx">0120-xxx-xxx</a>
+      営業時間 9:00〜17:00（休園日：月曜日、年末年始）
+    </address>
+    <small>Copyright 2014 ZOO LOGICAL All rights reserved.</small>
+  </footer>
+</body>
+</html>

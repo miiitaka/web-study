@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>お問い合わせ：ZOO LOGICAL</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="index.html">
+        <img src="images/logo.png" width="244" height="76" alt="ZOO LOGICAL">
+      </a>
+    </h1>
+  </header>
+
+  <nav class="nav-global">
+    <ul>
+      <li><a href="about.html">動物園について</a></li>
+      <li><a href="guide.html">ガイドのご案内</a></li>
+      <li><a href="animals.html">人気の動物たち</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav-breadcrumb">
+    <ol>
+      <li><a href="index.html">ZOO LOGICAL</a></li>
+      <li>お問い合わせ</li>
+    </ol>
+  </nav>
+
+  <div class="contents">
+    <main>
+      <article>
+        <h1>お問い合わせ</h1>
+
+        <p>
+          環境学習のご相談や動物に関する疑問など、お気軽にお問い合わせください。
+        </p>
+
+        <ul>
+          <li>必要事項を記入し、「確認する」をクリックしてください。</li>
+          <li>ご記入いただいた個人情報穂は、お問い合わせの回答以外には使用しません。</li>
+        </ul>
+
+        <form action="#">
+          <p>
+            <label for="name">お名前（必須）</label><br>
+            <input type="text" id="name" name="name" autofocus required>
+          </p>
+
+          <p>
+            <label for="mail">メールアドレス（必須）</label><br>
+            <input type="email" id="mail" name="mail" required>
+          </p>
+
+          <p>
+            お問い合わせ種類<br>
+            <input type="radio" id="kind0" name="kind" value="0" checked><label for="kind0">環境学習に関すること</label>
+            <input type="radio" id="kind1" name="kind" value="1"><label for="kind1">その他</label>
+          </p>
+
+          <p>
+            <label for="message">お問い合わせ内容</label><br>
+            <textarea id="message" name="message"></textarea>
+          </p>
+
+          <p>
+            <input type="submit" value="確認する">
+          </p>
+        </form>
+      </article>
+    </main>
+
+    <section class="contents-sub">
+      <nav>
+        <a href="guide.html">
+          <img src="images/bnr_guide.png" alt="ガイドのご案内" width="240" height="100">
+        </a>
+        <span>飼育員が動物たちをご紹介</span>
+        <a href="contact.html">
+          <img src="images/bnr_contact.png" alt="お問い合わせ" width="240" height="60">
+        </a>
+      </nav>
+    </section>
+  </div>
+
+  <footer>
+    <p class="pagetop"><a href="#top">ページの先頭に戻る</a></p>
+    <address>
+      山梨県富士吉田市X-X-X
+      電話 <a href="tel:0120-xxx-xxx">0120-xxx-xxx</a>
+      営業時間 9:00〜17:00（休園日：月曜日、年末年始）
+    </address>
+    <small>Copyright 2014 ZOO LOGICAL All rights reserved.</small>
+  </footer>
+</body>
+</html>
