@@ -15,13 +15,17 @@
 			<ul class="contents-news">
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-					<li>
-						<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
-						<?php the_title(); ?>
-					</li>
+						<li>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>">
+								<?php the_time( get_option( 'date_format' ) ); ?>
+							</time>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</li>
 					<?php endwhile; ?>
 				<?php else: ?>
-					<li>現在はお知らせはありません。</li>
+					<li>現在お知らせはありません。</li>
 				<?php endif; ?>
 			</ul>
 		</section>

@@ -29,7 +29,7 @@
 			$args = array(
 				'container'      => '',
 				'theme_location' => 'global',
-				'items_wrap'      => '<ul>%3$s</ul>'
+				'items_wrap'     => '<ul>%3$s</ul>'
 			);
 			wp_nav_menu( $args );
 			?>
