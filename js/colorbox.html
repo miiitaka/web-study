@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>colorboxの練習</title>
+<link rel="stylesheet" href="colorbox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="colorbox-master/jquery.colorbox.js"></script>
+</head>
+<body>
+
+<figure>
+	<a id="image" href="visual_image1.jpg">
+		<img src="visual_image1.jpg" width="830" height="355">
+	</a>
+</figure>
+
+<script>
+	$(function() {
+		$("#image").colorbox();
+	});
+</script>
+</body>
+</html>
