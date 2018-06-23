@@ -16,6 +16,8 @@
 					<?php the_title( '<h1>', '</h1>' ); ?>
 					更新日：<?php the_modified_time( get_option( 'date_format' ) ); ?>
 					登録日：<?php the_time( get_option( 'date_format' ) ); ?>
+					<?php the_category(); ?>
+					<?php the_tags(); ?>
 					<figure class="thumbnail">
 						<?php the_post_thumbnail(); ?>
 					</figure>

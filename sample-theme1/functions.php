@@ -3,6 +3,9 @@ function theme_setup() {
 	// Support title tag
 	add_theme_support( 'title-tag' );
 
+	// Support Thumbnail
+	add_theme_support( 'post-thumbnails' );
+
 	$args = array(
 		'height'      => 0,
 		'width'       => 0,
@@ -37,3 +40,18 @@ function theme_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
+
+function the_search_extend( $excerpt ) {
+	if ( is_search() ) {
+		$query = trim( get_search_query() );
+		$query = mb_convert_kana( $query, 'as', 'UTF-8' );
+
+		if ( !empty( $query ) ) {
+			$excerpt = str_replace( $query, '<mark>' . $query . '</mark>', $excerpt );
+		}
+	}
+	return $excerpt;
+}
+
+add_action( 'the_excerpt', 'the_search_extend' );
+add_action( 'the_title', 'the_search_extend' );
