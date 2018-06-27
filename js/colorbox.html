@@ -15,10 +15,59 @@
 	</a>
 </figure>
 
+<figure>
+	<a class="image" href="visual_image1.jpg">
+		<img src="visual_image1.jpg" width="830" height="355">
+	</a>
+</figure>
+<figure>
+	<a class="image" href="visual_image2.jpg">
+		<img src="visual_image2.jpg" width="830" height="355">
+	</a>
+</figure>
+<figure>
+	<a class="image" href="visual_image3.jpg">
+		<img src="visual_image3.jpg" width="830" height="355">
+	</a>
+</figure>
+
+<div>
+  <a id="inline-box" href="#inline-frame">Colorboxとは？</a>
+</div>
+<div class="modal-window" style="display:none;">
+  <div id="inline-frame">
+    <h2>Colorboxとは</h2>
+    <p>モーダルウィンドウを表示するためのプラグイン</p>
+    <p>$(セレクター).colorbox();と唱えるだけで実行できる。</p>
+  </div>
+</div>
+
+<div>
+  <a id="youtube" href="https://www.youtube.com/embed/02XMI2zZ3Kw">YouTubeを流す</a>
+</div>
+
 <script>
-	$(function() {
-		$("#image").colorbox();
-	});
+  $(function() {
+    $("#image").colorbox();
+
+		$(".image").colorbox({
+      rel: 'slideshow',
+      slideshow: true,
+      slideshowSpeed: 3000
+
+    });
+
+    $("#inline-box").colorbox({
+      inline: true
+    });
+
+    $("#youtube").colorbox({
+      open: true,
+      iframe: true,
+      innerWidth: 700,
+      innerHeight: 400
+    });
+  });
 </script>
 </body>
 </html>
