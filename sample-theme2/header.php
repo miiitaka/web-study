@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="UTF-8">
-<title>ソライロ病院</title>
+<meta charset="<?php bloginfo( 'charset' ) ?>">
+<meta charset="viewport" content="width=device-width, initial-scale=1">
+<meta charset="theme-color" content="#444444">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 	<header>
 		<h1>
 			<a href="index.html">
