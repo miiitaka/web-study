@@ -4,15 +4,15 @@
 <meta charset="<?php bloginfo( 'charset' ) ?>">
 <meta charset="viewport" content="width=device-width, initial-scale=1">
 <meta charset="theme-color" content="#444444">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 	<header>
 		<h1>
-			<a href="index.html">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" width="266" height="52" alt="ソライロ病院">
+			<a href="<?php home_url(); ?>">
+				<?php
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+				?>
 			</a>
 		</h1>
 	</header>
