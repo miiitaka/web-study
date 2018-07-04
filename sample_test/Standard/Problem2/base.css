@@ -1,0 +1,19 @@
+body {
+	color: #000;
+	background-color: #fc3;
+}
+
+h1 {
+	color: #306;
+	background-color: transparent;
+}
+
+.intro {
+	font-size: large;
+	font-weight: bold;
+}
+
+.supple {
+	font-size: small;
+	font-style: italic;
+}
