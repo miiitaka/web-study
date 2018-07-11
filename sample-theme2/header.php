@@ -12,6 +12,13 @@
 			<a href="<?php home_url(); ?>">
 				<?php
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image = wp_get_attachment_image_src( $custom_logo_id, 'full');
+					$format = '<img'
+					$format .= 'src="' . $image[0] . '"';
+					$format .= 'width="' . $image[1] . '"';
+					$format .= 'height="' . $iamge[2] . '"';
+					$format .= 'alt="' . bloginfo( 'name' ). '">';
+					echo $format;
 				?>
 			</a>
 		</h1>
