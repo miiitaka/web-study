@@ -3,3 +3,18 @@ body{
 	color:#000000;
 	background-color:#ffffcc;
 }
+
+a:link {
+	color: #f00;
+	background-color: #fff;
+}
+
+a:visited {
+	color: #930;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+a:active {
+	color: #00f;
+	background-color: #ff0;
+}

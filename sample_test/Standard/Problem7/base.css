@@ -1,0 +1,20 @@
+body{
+	color:#000;
+	background-color:#fc9;
+}
+
+table {
+	color: #000;
+	background-color: #ffc;
+	width: 300px;
+}
+
+th {
+	color: #000;
+	background-color: #0ff;
+	border: solid 1px #306;
+}
+
+td {
+	border: solid 1px #00f;
+}

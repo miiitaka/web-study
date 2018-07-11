@@ -1,0 +1,18 @@
+body {
+	color:#6633ff;
+	background-color:#ffffff;
+}
+
+img {
+	height:242px;
+	width:300px;
+}
+
+h1 {
+	font-size:large;
+}
+
+img {
+	float: left;
+	padding: 10px 15px;
+}

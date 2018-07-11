@@ -1,0 +1,11 @@
+body{
+	color:#003300;
+	background-color:#99ccff;
+}
+ol{
+	list-style-type:lower-alpha;
+}
+h1{
+	font-size:large;
+	font-weight:bold;
+}
