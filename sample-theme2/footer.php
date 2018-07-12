@@ -10,10 +10,15 @@
 			外来受付:<a href="tel:042XXXXXXX">042-XXX-XXXX</a>
 		</address>
 		<small>
-			Copyright 2015 SORAIRO HOSPITAL All rights reserved.
+			Copyright
+			<?php
+				echo date( 'Y' ) . ' ';
+				bloginfo( 'name' );
+			?> All rights reserved.
 		</small>
 	</div>
 </footer>
 <script src="<?php echo get_template_directory_uri(); ?>/js/slideshow.js"></script>
+<?php wp_footer(); ?>
 </body>
 </html>

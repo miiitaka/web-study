@@ -13,11 +13,12 @@
 				<?php
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$image = wp_get_attachment_image_src( $custom_logo_id, 'full');
-					$format = '<img'
-					$format .= 'src="' . $image[0] . '"';
-					$format .= 'width="' . $image[1] . '"';
-					$format .= 'height="' . $iamge[2] . '"';
-					$format .= 'alt="' . bloginfo( 'name' ). '">';
+
+					$format = '<img';
+					$format .= ' src="' . $image[0] . '"';
+					$format .= ' width="' . $image[1] . '"';
+					$format .= ' height="' . $image[2] . '"';
+					$format .= ' alt="' . get_bloginfo( 'name' ). '">';
 					echo $format;
 				?>
 			</a>
@@ -25,10 +26,11 @@
 	</header>
 
 	<nav>
-		<ul>
-			<li><a href="policy.html">当病院について</a></li>
-			<li><a href="service.html">診療科のご案内</a></li>
-			<li><a href="facility.html">施設紹介</a></li>
-			<li><a href="inquiry.html">お問い合わせ</a></li>
-		</ul>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary2'
+				)
+			);
+		?>
 	</nav>
