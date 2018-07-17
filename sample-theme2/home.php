@@ -13,22 +13,19 @@
 		<section class="topics">
 			<h2>トピックス</h2>
 			<ul>
+				<?php
+					$args = array(
+						'cat'            => 40,
+						'posts_per_page' => 5
+					);
+					query_posts( $args );
+				 while( have_posts() ) : the_post();
+			 ?>
 				<li>
-					<time datetime="2015-06-12">2015年06月12日</time>
-					セカンドオピニオン外来を開始いたします。
+					<time datetime="<?php the_time( 'Y-m-d' ) ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
+					<?php the_title(); ?>
 				</li>
-				<li>
-					<time datetime="2015-05-23">2015年05月23日</time>
-					6月より最新MRI検査機が2台に増えます。
-				</li>
-				<li>
-					<time datetime="2015-05-01">2015年05月01日</time>
-					平成27年度10月採用予定の看護師を募集します。
-				</li>
-				<li>
-					<time datetime="2015-04-20">2015年04月20日</time>
-					当院が緊急時避難ビルに指定されました。
-				</li>
+			<?php endwhile; ?>
 			</ul>
 		</section>
 	</main>
