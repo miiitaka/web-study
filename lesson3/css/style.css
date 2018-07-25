@@ -1,25 +1,54 @@
 ﻿@charset "utf-8";
 
-/* 基本レイアウト ここから↓ */
+body {
+	line-height: 150%;
+}
 
-/* 基本レイアウト ここまで↑ */
+header,
+nav,
+.topickpath,
+.contents,
+footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 840px;
+}
 
-/* トップページ ここから↓ */
+nav {
+	margin-bottom: 15px;
+}
 
-/* トップページ ここまで↑ */
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	overflow: hidden;
+}
 
-/* 「展覧会について」ページ ここから↓ */
+nav ul li {
+	width: 210px;
+}
 
-/* 「展覧会について」ページ ここまで↑ */
+nav ul li a {
+	display: block;
+	height: 0;
+	padding-top: 64px;
+}
 
-/* 「スケジュール」ページ ここから↓ */
+nav ul li.nav_introduction a {
+	background-image: url(../images/btn_navigation1.png);
+}
 
-/* 「スケジュール」ページ ここまで↑ */
+nav ul li.nav_schedule a {
+	background-image: url(../images/btn_navigation2.png);
+}
 
-/* 「作品紹介」ページ ここから↓ */
+nav ul li.nav_gallery a {
+	background-image: url(../images/btn_navigation3.png);
+}
 
-/* 「作品紹介」ページ ここまで↑ */
-
-/* 「前売り券申し込み」ページ ここから↓ */
-
-/* 「前売り券申し込み」ページ ここまで↑ */
+nav ul li.nav_tickets a {
+	background-image: url(../images/btn_navigation4.png);
+}
