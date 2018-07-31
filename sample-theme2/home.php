@@ -15,7 +15,6 @@
 			<ul>
 				<?php
 					$args = array(
-						'cat'            => 40,
 						'posts_per_page' => 5
 					);
 					query_posts( $args );
