@@ -55,3 +55,26 @@ function theme_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
+
+
+/**
+ * 検索キーワードマークアップ
+ * @version 1.0.0
+ * @since   1.0.0
+ * @author  k.takami
+ * @param   string $str
+ * @return  string $str
+ */
+function theme_search_keyword( $str ) {
+	if ( is_search() ) {
+		$query = trim( get_search_query() );
+		$query = mb_convert_kana( $query, 'as', 'UTF-8' );
+
+		if ( !empty( $query ) ) {
+			$str = str_replace( $query, '<mark>' . $query . '</mark>', $str );
+		}
+		return $str;
+	}
+}
+add_action( 'get_the_excerpt', 'theme_search_keyword' );
+add_action( 'the_title', 'theme_search_keyword' );
