@@ -27,22 +27,22 @@ header h1 {
 header h1 a {
 	display: inline-block;
 }
-#topicpath {
+.topicpath {
 	margin-bottom: 30px;
 }
-#topicpath ol {
+.topicpath ol {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-#topicpath ol li {
+.topicpath ol li {
 	display: inline;
 	margin-right: 5px;
 }
-#topicpath ol li a {
+.topicpath ol li a {
 	padding-right: 15px;
 }
-#contents {
+.contents {
 	margin-bottom: 30px;
 	overflow: hidden;
 }
@@ -61,11 +61,11 @@ header h1 a {
 .btn_field dd {
 	text-align: center;
 }
-#pagetop {
+.pagetop {
 	margin-bottom: 0;
 	float: right;
 }
-#pagetop a {
+.pagetop a {
 	display: block;
 	min-height: 16px;
 	padding: 6px 0 6px 28px;
@@ -73,7 +73,7 @@ header h1 a {
 	background-repeat: no-repeat;
 	background-position: left center;
 }
-footer #info_field {
+footer .info_field {
 	min-height: 42px;
 	padding: 15px 0 7px 0;
 	clear: right;
@@ -85,14 +85,14 @@ address {
 	font-style: normal;
 	text-align: center;
 }
-#copyright {
+.copyright {
 	text-align: center;
 	margin-bottom: 0;
 }
-#copyright small {
+.copyright small {
 	font-size: 100%;
 }
-#main h2 {
+main h2 {
 	margin: 0 0 20px 0;
 	padding: 5px 0 0 20px;
 	background-image: url(../images/h2.gif);
@@ -117,13 +117,13 @@ address {
 #pickup_field ul li.now {
 	display: block;
 }
-#topics ul li time {
+.topics ul li time {
 	display: inline-block;
 	width: 9.3em;
 	font-weight: bold;
 	text-indent: 0;
 }
-sec_field p:last-child {
+.sec_field p:last-child {
 	margin-bottom: 0;
 }
 .pic_left {
