@@ -89,16 +89,37 @@ main h1 {
 	margin: 0;
 	padding-left: 0;
 }
+
 .topics ul li{
 	border-bottom: 1px dotted #666;
 	margin-top: 1.5em;
 	padding: 0 0 1.5em 9.3em;
 	text-indent: -9.3em;
 }
+
 .sec_fild{
 	overflow: hidden;
 	margin-bottom: 30px;
 }
+
 .sec_fild:last-child{
 	margin-bottom: 0;
+}
+
+table thead tr {
+	background-color: #333;
+	color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.pic_field {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pic_field figure {
+	width: 290px;
 }
