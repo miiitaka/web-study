@@ -2,8 +2,9 @@
 <html lang="ja">
 	<head>
 	<meta charset="UTF-8">
-	<title>動物園について：ZOO LOGICAL</title>
+	<title>ZOO LOGICAL</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css" media="screen and (max-width:480px)">
 	</head>
 
 	<body>
@@ -42,18 +43,36 @@
 			</ul>
 		</nav>
 
-		<div id="path">
-			<ol>
-				<li><a href="index.html">ホーム</a></li>
-				<li>動物園について</li>
-			</ol>
+		<div id="graphic">
+			<ul>
+				<li class="now">
+					<img src="images/graphic1.png" alt="「ペンギンのすみか」が4月25日にオープン！遊びにきてね！" class="image1">
+				</li>
+				<li>
+					<img src="images/graphic2.png" alt="ZOO LOGICALにパンダが登場！5月10日から6月29日まで" class="image2">
+				</li>
+				<li>
+					<img src="images/graphic3.png" alt="トラさんが「みんなの来場を待ってるよ！」と言っている。" class="image3">
+				</li>
+			</ul>
 		</div>
 	<!-- contents -->
 		<div id="contents">
 			<div id="main">
-				<article>
-					<h1>動物園について</h1>
-				</article>
+				<section id="news">
+					<h2>お知らせ</h2>
+					<ul>
+						<li>
+							<time datetime="2014-07-25">2014年07年25日</time>動物園にライオンがやってきます。
+						</li>
+						<li>
+							<time datetime="2014-05-10">2014年05月10日</time>緊急企画『パンダ展』開催します。
+						</li>
+						<li>
+							<time datetime="2014-04-25">2014年04月25日</time>ゴールデンウィーク展『ペンギンのライフスタイル』を開催します。
+						</li>
+					</ul>
+				</section>
 			</div>
 			<div id="sub">
 				<aside>
@@ -89,5 +108,6 @@
 				<small>Copyright 2014 ZOO LOGICAL All rights reserved.</small>
 			</p>
 		</footer>
+		<script src="js/slideshow.js"></script>
 	</body>
 </html>
