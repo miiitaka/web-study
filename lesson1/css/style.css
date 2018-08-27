@@ -121,7 +121,12 @@ nav ul li a:hover {
 /* 「動物園について」ページ ここまで↑ */
 
 /* 「ガイドのご案内」ページ ここから↓ */
-
+table thead tr th {
+	background-color: #ffdd63;
+}
+table tbody tr:nth-child(even) td {
+	background-color: #eef8fa;
+}
 /* 「ガイドのご案内」ページ ここまで↑ */
 
 /* 「人気の動物たち」ページ ここから↓ */
