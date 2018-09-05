@@ -9,7 +9,7 @@ header, nav, #pickup_field, .contents, footer {
 #pickup_field ul li img {
 	width: 450px;
 }
-main, .opics h2, .topics ul li {
+main, .topics h2, .topics ul li {
 	width: auto;
 	margin: 0;
 	float: none;

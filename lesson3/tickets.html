@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>前売り券申し込み|日本の景色写真展</title>
-<link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
 </head>
 <body>
 	<header id="top">
@@ -24,7 +24,7 @@
 		</ul>
 	</nav>
 
-	<nav class="topickpath">
+	<nav class="topicpath">
 		<ol>
 			<li><a href="index.html">ホーム</a>&gt;</li>
 			<li>前売り券申し込み</li>
@@ -46,18 +46,26 @@
 				<form action="#">
 					<p>
 						<label for="name">お名前（必須）</label><br>
-						<input type="name" name="name" id="name" required>
+						<input type="text" name="name" id="name" required>
 					</p>
 					<p>
 						<label for="mailaddress">メールアドレス（必須）</label><br>
 						<input type="email" name="mailaddress" id="mailaddress" required>
 					</p>
 					<p>
-						ご希望会場
+						<label for="pref">ご希望会場</label>
+						<select name="pref" id="pref">
+							<option value="2">福岡</option>
+							<option value="3">名古屋</option>
+							<option value="4">仙台</option>
+						</select>
 					</p>
 					<p>
 						<label for="freespace">備考</label><br>
-						<textarea name="freespace" id="freespace"></textarea>
+						<textarea name="freespace" id="freespace">例：お問い合わせ内容を入力してください</textarea>
+					</p>
+					<p>
+						<input type="image" src="images/form_button.png" alt="申込み内容の確認">
 					</p>
 				</form>
 			</article>
@@ -74,20 +82,20 @@
 			<div class="btn_field">
 				<a href="tickets.html">
 					<figure>
-						<img src="images/btn_tickets.jpg" alt="作品紹介">
+						<img src="images/btn_tickets.jpg" alt="前売り券申し込み">
 						<figcaption>前売り券好評発売中</figcaption>
 					</figure>
-				</a>
+			</a>
 			</div>
 		</div>
-	</div>
 
+	</div>
 	<footer>
 		<p class="pagetop">
 			<a href="">ページの先頭へ戻る</a>
 		</p>
 		<div class="info_field">
-			<address>電話 0120-XXX-001 FAX 0120-XXX-002</address>
+			<address>電話 0120-xxx-xxx FAX 0120-xxx-002</address>
 			<p class="copyright">
 				<small>Copyright 2015 日本の景色写真展 All rights reserved.</small>
 			</p>

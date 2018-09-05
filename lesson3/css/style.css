@@ -1,108 +1,101 @@
 ﻿@charset "utf-8";
-
-body {
+body{
 	line-height: 150%;
 }
 
-header,
-nav,
-.topickpath,
-.contents,
-footer {
+header,nav,.topicpath,.contents,footer{
+	width: 840px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 840px;
 }
 
-nav {
+nav{
 	margin-bottom: 15px;
 }
 
-nav ul {
-	display: flex;
-	justify-content: space-between;
+nav ul{
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	overflow: hidden;
+	display: flex;
 }
 
-nav ul li {
+nav ul li{
 	width: 210px;
 }
 
-nav ul li a {
+nav ul li a{
 	display: block;
 	height: 0;
 	padding-top: 64px;
 }
 
-nav ul li.nav_introduction a {
-	background-image: url(../images/btn_navigation1.png);
-}
-
-nav ul li.nav_schedule a {
-	background-image: url(../images/btn_navigation2.png);
-}
-
-nav ul li.nav_gallery a {
-	background-image: url(../images/btn_navigation3.png);
-}
-
-nav ul li.nav_tickets a {
-	background-image: url(../images/btn_navigation4.png);
-}
-
-nav ul li a:hover {
+nav ul li a:hover{
 	background-position: 0 -64px;
 }
 
-.contents {
+nav ul li.nav_introduction a{
+	background-image: url(../images/btn_navigation1.png)
+}
+nav ul li.nav_schedule a{
+	background-image: url(../images/btn_navigation2.png)
+}
+nav ul li.nav_gallery a{
+	background-image: url(../images/btn_navigation3.png)
+}
+nav ul li.nav_tickets a{
+	background-image: url(../images/btn_navigation4.png)
+}
+
+
+
+.contents{
 	display: flex;
 	justify-content: space-between;
 }
 
-main {
+main{
 	width: 610px;
 }
 
-.sub {
+.sub{
 	width: 200px;
 }
 
-figure {
+figure{
 	margin: 0;
 }
 
-main h1 {
-	background-image: url(../images/h1_top.png), url(../images/h1_bottom.png);
-	background-repeat: no-repeat, no-repeat;
-	background-position: center top, center bottom;
-	font-size: 175%;
-	padding: 35px 20px;
+main h1{
 	margin: 0 0 30px 0;
+	padding: 35px 20px;
+	background-image: url(../images/h1_top.png),url(../images/h1_bottom.png);
+	background-repeat: no-repeat,no-repeat;
+	background-position: center top,center bottom;
+	font-size: 175%;
 	text-align: center;
 }
 
-.topics ul{
+.topics ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
 
-.topics ul li{
-	border-bottom: 1px dotted #666;
+.topics ul li {
 	margin-top: 1.5em;
 	padding: 0 0 1.5em 9.3em;
+	border-bottom: 1px dotted #666;
 	text-indent: -9.3em;
 }
 
-.sec_fild{
-	overflow: hidden;
+.sec_field {
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 
-.sec_fild:last-child{
+.sec_field:last-child {
 	margin-bottom: 0;
 }
 
@@ -122,4 +115,9 @@ table tbody tr:nth-child(even) {
 
 .pic_field figure {
 	width: 290px;
+}
+
+input[required]{
+	width: 250px;
+	background: #fcc;
 }
