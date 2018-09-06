@@ -6,6 +6,6 @@ $(function(){
 
 	/* ページトップにもどる処理 */
 	$("#pagetop").on("click", function(){
-		alert("クリックしたよー＼(^o^)／");
+		$("html, body").animate({scrollTop: 0}, 500);
 	});
 });
