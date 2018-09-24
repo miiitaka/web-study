@@ -79,11 +79,27 @@ footer #info_group {
 /* 基本レイアウト ここまで↑ */
 
 /* トップページ ここから↓ */
-
+#topics ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#topics ul li {
+	border-bottom: 1px dotted #333;
+	margin-top: 20px;
+	padding: 0 10px 20px 160px;
+	text-indent: -160px;
+}
 /* トップページ ここまで↑ */
 
 /* 「当病院について」ページ ここから↓ */
-
+.h2_group {
+	margin-top: 20px;
+	overflow: hidden;
+}
+.h2_group:last-child {
+	margin-bottom: 10px;
+}
 /* 「当病院について」ページ ここまで↑ */
 
 /* 「診療科のご案内」ページ ここから↓ */
