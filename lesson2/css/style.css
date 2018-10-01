@@ -103,11 +103,24 @@ footer #info_group {
 /* 「当病院について」ページ ここまで↑ */
 
 /* 「診療科のご案内」ページ ここから↓ */
-
+table thead tr {
+	background-color: #f3bf31;
+	color: #333333;
+}
+table tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
 /* 「診療科のご案内」ページ ここまで↑ */
 
 /* 「施設紹介」ページ ここから↓ */
-
+.facility_group figure {
+	width: 170px;
+	margin: 0 18px 25px 0;
+	float: left;
+}
+.facility_group figure:nth-child(3n) {
+	margin-right: 0;
+}
 /* 「施設紹介」ページ ここまで↑ */
 
 /* 「お問い合わせ」ページ ここから↓ */
