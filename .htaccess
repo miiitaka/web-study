@@ -26,6 +26,14 @@ Order deny,allow
 <Files /blog/sample-page/>
 Require valid-user
 </Files>
+
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# http → https のリダイレクト方法
+# RewriteEngine on
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://www.xxxxxx.com/$1 [R=301,L]
+
 # END Original
 
 # BEGIN WordPress
