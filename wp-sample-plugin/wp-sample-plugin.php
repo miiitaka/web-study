@@ -29,7 +29,9 @@ class Sample_Plugin {
 	 * @since 1.0.0
 	 */
 	public function create_table() {
-		
+		require_once( plugin_dir_path( __FILE__ ) . 'includes/wp-sample-admin-db.php' );
+		$db = new Sample_Plugin_Admin_Db();
+		$db->create_table();
 	}
 
 	/**
@@ -71,7 +73,7 @@ class Sample_Plugin {
 			'サンプル登録',
 			'サンプル登録',
 			'manage_options',
-			plugin_dir_path( __FILE__ ) . 'includes/wp-sample_plugin_post.php',
+			plugin_dir_path( __FILE__ ) . 'includes/wp-sample-plugin-post.php',
 			array( $this, 'post_page_render' ),
 			'dashicons-format-status'
 		);
