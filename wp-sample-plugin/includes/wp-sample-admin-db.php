@@ -29,14 +29,14 @@ class Sample_Plugin_Admin_Db {
 	public function create_table() {
 		global $wpdb;
 
-		$prepared         = $wpdb->prepare( "SHOW TABLES %s" , $this->table_name );
-		$is_db_exist      = $wpdb->get_var( $prepared );
-		$chareset_collate = $wpdb->get_chareset_collate();
+		$prepared        = $wpdb->prepare( "SHOW TABLES %s" , $this->table_name );
+		$is_db_exist     = $wpdb->get_var( $prepared );
+		$charset_collate = $wpdb->get_charset_collate();
 
 		if ( is_null( $is_db_exist ) ) {
 			require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
-			$query  = "CREATE TABLE wp_sample_post(";
+			$query  = "CREATE TABLE ". $this->table_name . " (";
 			$query .= "id MEDIUMINT(9) NOT NULL AUTO_INCREMENT PRIMARY KEY,";
 			$query .= "image_url TEXT NOT NULL,";
 			$query .= "image_alt TEXT,";

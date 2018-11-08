@@ -59,7 +59,7 @@ class Sample_Plugin {
 			array( $this, 'list_page_render' ),
 			'dashicons-format-status'
 		);
-		add_submenu_page(
+		$list_page = add_submenu_page(
 			__FILE__,
 			'サンプル一覧',
 			'サンプル一覧',
