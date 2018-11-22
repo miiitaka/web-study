@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html lang="ja">
+<head>
+	<title>Lesson3</title>
+	<style>
+		#graph rect {
+			fill: #990000;
+		}
+	</style>
+</head>
+<body>
+	<svg id="graph"></svg>
+
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script>
+		"use strict";
+
+		d3.select("#graph")
+			.append("rect")
+			.attr("x", 0)
+			.attr("y", 10)
+			.attr("width", 200)
+			.attr("height", 20);
+	</script>
+</body>
+</html>

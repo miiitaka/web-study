@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="ja">
+<head>
+	<title>Lesson4</title>
+	<style>
+		#graph rect {
+			fill: #990000;
+		}
+	</style>
+</head>
+<body>
+	<svg id="graph"></svg>
+
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script>
+		"use strict";
+
+		var dataList = [300,100,50,230,25];
+
+		d3.select("#graph")
+			.selectAll("rect")
+			.data(dataList)
+			.enter()
+			.append("rect")
+			.attr("x", 0)
+			.attr("y", function(d,i){return i * 25;})
+			.attr("width", function(d,i){return d;})
+			.attr("height", 20);
+	</script>
+</body>
+</html>

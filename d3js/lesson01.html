@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html lang="ja">
+<head>
+	<title>Lesson1</title>
+	<style>
+		.bar rect {
+			fill: #990000;
+		}
+		.bar text {
+			fill: #fff;
+			text-anchor: end;
+		}
+	</style>
+</head>
+<body>
+	<h1>Rectangle</h1>
+	<svg class="bar" width="300" height="200">
+		<g transform="translate(0,0)">
+			<rect width="45" height="25"></rect>
+			<text x="20" y="17.5">10</text>
+		</g>
+		<g transform="translate(0,26)">
+			<rect width="25" height="25"></rect>
+			<text x="12.5" y="17.5">5</text>
+		</g>
+	</svg>
+
+	<h1>Circle</h1>
+	<svg width="300" height="200">
+		<g>
+			<circle cx="60" cy="60" r="50"></circle>
+		</g>
+	</svg>
+	
+	<h1>Ellipse</h1>
+	<svg width="300" height="200">
+		<g>
+			<ellipse cx="60" cy="60" rx="50" ry="25"></ellipse>
+		</g>
+	</svg>
+
+	<h1>Line</h1>
+	<svg width="300" height="200">
+		<g>
+			<line x1="20" y1="100" x2="100" y2="20" stroke="black" stroke-width="2"></line>
+		</g>
+	</svg>
+
+	<h1>Polygon</h1>
+	<svg width="300" height="200">
+		<g>
+			<polygon points="60,20,100,40,100,80,60,100,20,80,20,40"></polygon>
+		</g>
+	</svg>
+</body>
+</html>
