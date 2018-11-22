@@ -68,7 +68,7 @@ class Sample_Plugin {
 			array( $this, 'list_page_render' ),
 			'dashicons-format-status'
 		);
-		add_submenu_page(
+		$post_page = add_submenu_page(
 			__FILE__,
 			'サンプル登録',
 			'サンプル登録',
@@ -77,7 +77,9 @@ class Sample_Plugin {
 			array( $this, 'post_page_render' ),
 			'dashicons-format-status'
 		);
-		add_action( 'admin_print_styles-' . $list_page, array( $this, 'add_style') );
+		add_action( 'admin_print_styles-' .  $list_page, array( $this, 'add_style') );
+		add_action( 'admin_print_styles-' .  $post_page, array( $this, 'add_style') );
+		add_action( 'admin_print_scripts-' . $post_page, array( $this, 'add_scripts') );
 	}
 
 	/**
@@ -110,5 +112,15 @@ class Sample_Plugin {
 	 */
 	public function add_style () {
 		wp_enqueue_style( 'sample-plugin-style' );
+	}
+
+	/**
+	 * Add scripts.
+	 *
+	 * @version 1.0.0
+	 * @since 1.0.0
+	 */
+	public function add_scripts () {
+		wp_enqueue_media();
 	}
 }
