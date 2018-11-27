@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html lang="ja">
+<head>
+	<title>Lesson6</title>
+	<meta charset="utf-8">
+	<style>
+		#graph rect {
+			fill: #990000;
+		}
+	</style>
+</head>
+<body>
+	<svg id="graph"></svg>
+	<div id="button"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script>
+		"use strict";
+
+		var dataList = [
+			[300,100,50,230,25],
+			[100,120,80,200,90],
+			[200,200,200,200,200]
+		];
+		var pref = ["北海道", "青森", "秋田"];
+
+		for (var i = 0; i < dataList.length; i++) {
+			var elem = $("<button>").addClass("update").attr("data-num", i).text(pref[i]);
+			$("#button").append(elem);
+		}
+		
+
+		d3.select("#graph")
+			.selectAll("rect")
+			.data(dataList[0])
+			.enter()
+			.append("rect")
+			.attr("x", 0)
+			.attr("y", function(d,i){return i * 25;})
+			.attr("width", 0)
+			.attr("height", 20)
+			.transition()
+			.delay(function(d,i){return i * 500;})
+			.duration(2500)
+			.attr("width", function(d,i){return d;});
+
+		$(".update").on("click", function(){
+			drawGraph(dataList[parseInt($(this).data("num"), 10)]);
+		});
+
+		function drawGraph(data){
+			d3.select("#graph")
+				.selectAll("rect")
+				.data(data)
+				.transition()
+				.attr("width", function(d,i){return d;});
+		}
+	</script>
+</body>
+</html>
