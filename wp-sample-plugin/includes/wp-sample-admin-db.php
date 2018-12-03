@@ -2,9 +2,9 @@
 /**
  * Class List Page
  *
- * @author web-study
+ * @author  web-study
  * @version 1.0.0
- * @since 1.0.0
+ * @since   1.0.0
  */
 class Sample_Plugin_Admin_Db {
 	private $table_name;
@@ -13,7 +13,7 @@ class Sample_Plugin_Admin_Db {
 	 * Constructor
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function __construct() {
 		global $wpdb;
@@ -24,7 +24,7 @@ class Sample_Plugin_Admin_Db {
 	 * Create main table.
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function create_table() {
 		global $wpdb;
@@ -56,4 +56,14 @@ class Sample_Plugin_Admin_Db {
 		}
 	}
 
+	/**
+	 * Insert Post.
+	 *
+	 * @version 1.0.0
+	 * @since   1.0.0
+	 * @param   array $post
+	 */
+	public function insert_options( array $post ) {
+		var_dump($post);
+	}
 }

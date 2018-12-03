@@ -8,13 +8,14 @@ Author: web-study
 Author URI: https://github.com/miiitaka/web-study/tree/201801/wp-sample-plugin
 License: GPLv2 or later
 */
+require_once( plugin_dir_path( __FILE__ ) . 'includes/wp-sample-admin-db.php' );
 new Sample_Plugin();
 class Sample_Plugin {
 	/**
 	 * Constructor
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function __construct() {
 		register_activation_hook( __FILE__, array( $this, 'create_table' ) );
@@ -26,10 +27,9 @@ class Sample_Plugin {
 	 * Create Table.
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function create_table() {
-		require_once( plugin_dir_path( __FILE__ ) . 'includes/wp-sample-admin-db.php' );
 		$db = new Sample_Plugin_Admin_Db();
 		$db->create_table();
 	}
@@ -38,7 +38,7 @@ class Sample_Plugin {
 	 * Add admin initialize.
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function admin_init() {
 		wp_register_style( 'sample-plugin-style', plugins_url( 'css/style.css', __FILE__ ), array(), '1.0.0' );
@@ -48,7 +48,7 @@ class Sample_Plugin {
 	 * Add admin menus.
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function admin_menu() {
 		add_menu_page(
@@ -118,7 +118,7 @@ class Sample_Plugin {
 	 * Add scripts.
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function add_scripts () {
 		wp_enqueue_media();

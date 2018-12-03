@@ -4,16 +4,19 @@
  *
  * @author web-study
  * @version 1.0.0
- * @since 1.0.0
+ * @since   1.0.0
  */
 class Sample_Plugin_Post {
 	/**
 	 * Constructor
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	public function __construct() {
+		$db = new Sample_Plugin_Admin_Db();
+		$db->insert_options( $_POST );
+
 		$this->page_render();
 	}
 	
@@ -21,12 +24,12 @@ class Sample_Plugin_Post {
 	 * Rendaring Page
 	 *
 	 * @version 1.0.0
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	private function page_render() {
 		$html  = '<div class="wrap">';
 		$html .= '<h1 class-"wp-heading-inline">サンプル登録</h1>';
-		
+
 		echo $html;
 
 		$html  = '<form method="post" action="">';
