@@ -42,13 +42,13 @@ class Sample_Plugin_Post {
 		$html .= '<th>画像の URL (必須)</th>';
 		$html .= '<td>';
 		$html .= '<img id="banner-image-view" src="' . plugins_url('../images/no-image.png', __FILE__) . '" width="200">';
-		$html .= '<input id="banner-image-url" type="text" class="large-text" name="sample-image-url">';
+		$html .= '<input id="banner-image-url" type="text" class="large-text" name="sample-image-url" required>';
 		$html .= '<button id="media-upload" class="button">画像を選択</button>';
 		$html .= '</td>';
 		$html .= '</tr>';
 
 		$html .= '<tr>';
-		$html .= '<th>画像 Alt属性 (必須)</th>';
+		$html .= '<th>画像 Alt属性</th>';
 		$html .= '<td><input id="banner-image-alt" type="text" class="regular-text" name="sample-image-alt">';
 		$html .= '<p class="description">alt属性のテキストを入力します。</p></td>';
 		$html .= '</tr>';
@@ -83,8 +83,8 @@ class Sample_Plugin_Post {
 		$html .= '<tr>';
 		$html .= '<th>表示方法 (必須)</th>';
 		$html .= '<td>';
-		$html .= '<input type="radio" name="sample-how-display">記事の下に表示<br>';
-		$html .= '<input type="radio" name="sample-how-display">ショートコードで表示';
+		$html .= '<input type="radio" name="sample-how-display" value="post_bottom" required>記事の下に表示<br>';
+		$html .= '<input type="radio" name="sample-how-display" value="shortcode">ショートコードで表示';
 		$html .= '</td>';
 		$html .= '</tr>';
 
