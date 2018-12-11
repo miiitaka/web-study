@@ -26,7 +26,7 @@ class Sample_Plugin_List {
 	 * @param   Sample_Plugin_Admin_Db $db
 	 */
 	private function page_render( $db ) {
-		$post_url = admin_url() . 'admin.php?page=wp-sample-plugin/includs/wp-sample-plugin-post.php';
+		$post_url = admin_url() . 'admin.php?page=wp-sample-plugin/includes/wp-sample-plugin-post.php';
 
 		$html  = '<div class="wrap">';
 		$html .= '<h1 class-"wp-heading-inline">サンプル一覧</h1>';
