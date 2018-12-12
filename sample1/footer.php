@@ -9,5 +9,6 @@
       <small>Copyright 2014 ZOO LOGICAL All rights reserved.</small>
     </p>
   </footer>
+<?php wp_footer(); ?>
 </body>
 </html>
