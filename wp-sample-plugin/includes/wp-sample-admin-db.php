@@ -126,4 +126,63 @@ class Sample_Plugin_Admin_Db {
 		$wpdb->insert( $this->table_name, $data, $prepared );
 		return $wpdb->insert_id;
 	}
+
+	/**
+	 * Update Post.
+	 *
+	 * @version 1.0.0
+	 * @since   1.0.0
+	 * @param   array $post
+	 */
+	public function update_options( array $post ) {
+		global $wpdb;
+
+		$data = array(
+			'image_url'            => $post['sample-image-url'],
+			'image_alt'            => $post['sample-image-alt'],
+			'link_url'             => $post['sample-image-link'],
+			'open_new_tab'         => isset( $post['sample-image-target'] ) ? 1 : 0,
+			'insert_element_class' => $post['sample-element-class'],
+			'insert_element_id'    => $post['sample-element-id'],
+			'how_display'          => $post['sample-how-display'],
+			'filter_category'      => isset( $post['sample-filter-category'] ) ? 1 : 0,
+			'category_id'          => $post['sample-display-category'],
+			'update_date'          => date( 'Y-m-d H:i:s' )
+		);
+
+		$key = array( 'id' => $post['sample_id'] );
+
+		$prepared = array(
+			'%s',
+			'%s',
+			'%s',
+			'%d',
+			'%s',
+			'%s',
+			'%s',
+			'%d',
+			'%d',
+			'%s'
+		);
+
+		$key_prepared = array( '%d' );
+
+		$wpdb->update( $this->table_name, $data, $key, $prepared, $key_prepared );
+	}
+
+	/**
+	 * Delete Post.
+	 *
+	 * @version 1.0.0
+	 * @since   1.0.0
+	 * @param   integer $id
+	 */
+	public function delete_options( $id ) {
+		global $wpdb;
+
+		$key = array( 'id' => $id );
+		$key_prepared = array( '%d' );
+
+		$wpdb->delete( $this->table_name, $key, $key_prepared );
+	}
 }
