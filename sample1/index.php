@@ -1,9 +1,9 @@
 <?php get_header(); ?>
   <nav class="nav-breadcrumb" id="graphic">
     <ul>
-      <li class="now"><img src="images/graphic1.png" alt="「ペンギンのすみか」が4月25日にオープン！遊びに来てね！" class="image1"></li>
-      <li><img src="images/graphic2.png" alt="ZOO LOGICALにパンダが登場！5月10日から6月29日まで" class="image2"></li>
-      <li><img src="images/graphic3.png" alt="トラさんが「みんなの来場を待ってるよ！」と言っている。" class="image3"></li>
+      <li><img src="<?php echo get_template_directory_uri(); ?>/images/graphic1.png" alt="「ペンギンのすみか」が4月25日にオープン！遊びに来てね！" class="image1"></li>
+      <li><img src="<?php echo get_template_directory_uri(); ?>/images/graphic2.png" alt="ZOO LOGICALにパンダが登場！5月10日から6月29日まで" class="image2"></li>
+      <li><img src="<?php echo get_template_directory_uri(); ?>/images/graphic3.png" alt="トラさんが「みんなの来場を待ってるよ！」と言っている。" class="image3"></li>
     </ul>
   </nav>
 
@@ -12,31 +12,17 @@
       <section>
         <h2>お知らせ</h2>
         <ul class="contents-news">
-          <li><time datetime="2014-07-25">2014年07月25日</time>動物園にライオンがやってきます。</li>
-          <li><time datetime="2014-05-10">2014年05月10日</time>緊急企画「パンダ展」を開催します。</li>
-          <li><time datetime="2014-04-25">2014年04月25日</time>ゴールデンウィーク展「ペンギンのライフスタイル」を開催します。</li>
+					<?php while( have_posts() ) : the_post(); ?>
+						<li>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>">
+							<?php the_time( get_option( 'date_format' ) ); ?>
+						</time>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</li>
+					<?php endwhile ?>
         </ul>
       </section>
     </main>
-
-    <div class="sub">
-      <aside>
-        <div class="bnr_area">
-          <dl>
-            <dt>
-              <a href="guide.html">
-                <img src="images/bnr_guide.png" width="240" height="100" alt="ガイドのご案内">
-              </a>
-            </dt>
-            <dd>飼育委員が動物たちをご紹介</dd>
-          </dl>
-        </div>
-        <div class="bnr_area">
-          <a href="contanct.html">
-            <p><img src="images/bnr_contact.png" width="240" height="60" alt="お問い合わせ"></p>
-          </a>
-        </div>
-      </aside>
-    </div>
+		<?php get_sidebar(); ?>
   </div>
 <?php get_footer(); ?>
