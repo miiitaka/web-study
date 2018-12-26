@@ -24,3 +24,17 @@ function theme_scripts() {
 	wp_enqueue_script( 'theme-slide',  get_template_directory_uri(). '/js/slide.js', array( 'jquery' ));
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
+
+
+
+function theme_widgets_init() {
+	register_sidebar(
+		array(
+			'name'        => 'サイドバー',
+			'id'          => 'sidebar-1',
+			'description' => '右のサイドバーに配置するウィジェットエリアですね。'
+		)
+	);
+}
+add_action( 'widgets_init', 'theme_widgets_init' );

@@ -1,5 +1,6 @@
 <div class="sub">
-	<aside>
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<!-- <aside>
 		<div class="bnr_area">
 			<dl>
 				<dt>
@@ -15,5 +16,5 @@
 				<p><img src="images/bnr_contact.png" width="240" height="60" alt="お問い合わせ"></p>
 			</a>
 		</div>
-	</aside>
+	</aside> -->
 </div>
