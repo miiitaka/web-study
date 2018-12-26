@@ -30,7 +30,7 @@ class Sample_Plugin_List {
 
 		$html  = '<div class="wrap">';
 		$html .= '<h1 class-"wp-heading-inline">サンプル一覧</h1>';
-		$html .= '<a href="" class="page-title-action">新規追加</a>';
+		$html .= '<a href="' . $post_url . '" class="page-title-action">新規追加</a>';
 		
 		$html .= '<table>';
 		$html .= '<tr>';
