@@ -4,7 +4,8 @@ body {
 
 header, main {
 	margin: 0 auto;
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 }
 
 h1 {
@@ -18,6 +19,10 @@ h1 {
 	margin-bottom: 20px;
 }
 
+.image img {
+	width: 100%;
+}
+
 .contents {
 	display: flex;
 	justify-content: space-between;
@@ -29,7 +34,7 @@ h1 {
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	box-sizing: border-box;
-	padding: 10px 20px;
+	padding: 10px 20px 30px;
 	width: 48%;
 }
 
@@ -44,6 +49,10 @@ h1 {
 	margin: 20px 0;
 }
 
+.contents section p:last-of-type {
+	margin-bottom: 0;
+}
+
 .contents section ul {
 	list-style: disc;
 	padding-left: 20px;
@@ -51,4 +60,19 @@ h1 {
 
 .contents section li:not(:last-child) {
 	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 960px) {
+	.contents {
+		flex-wrap: wrap;
+	}
+
+	.contents section {
+		width: 98%;
+		margin: 0 auto;
+	}
+
+	.contents section:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
 }
