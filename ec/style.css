@@ -9,7 +9,56 @@ body {
 }
 
 .l-header header {
+	align-items: center;
 	/* background: #999; */
+	display: flex;
+	justify-content: space-between;
 	margin: 0 auto;
 	width: 1000px;
+}
+
+.l-header-global ul {
+	display: flex;
+	font-family: 'Oswald', sans-serif;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.l-header-global ul li {
+	margin: 0 30px;
+}
+
+.l-header-items {
+	display: flex;
+	font-family: 'Oswald', sans-serif;
+	justify-content: flex-end;
+}
+
+.l-header-items nav {
+	margin-left: 20px;
+}
+
+.l-header-item-login,
+.l-header-item-favorite {
+	align-items: center;
+	display: flex;
+}
+
+.l-header-item-login::before {
+	content: url(images/login.png);
+	margin-right: 4px;
+}
+
+.l-header-item-favorite::before {
+	content: url(images/favorite.png);
+	margin-right: 4px;
+}
+
+.f-search {
+	background: #f3f3f3;
+	border: 1px solid #f3f3f3;
+	border-radius: 5px;
+	padding: 5px;
+	width: 240px;
 }
