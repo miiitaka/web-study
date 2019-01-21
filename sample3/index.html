@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="これはページの要約を書きます">
+	<link href="https://fonts.googleapis.com/css?family=Coiny|Press+Start+2P" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>デジタル時計</title>
+	<style>
+		#clock {
+			background: #000;
+			border-radius: 20px;
+			color: #8f0;
+			font-size: 70px;
+			font-weight: bold;
+			font-family: 'Press Start 2P', cursive;
+			margin: 80px auto;
+			padding: 100px 50px;
+			text-align: center;
+			width: 700px;
+		}
+		#seconds,
+		#milliseconds {
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div id="clock">
+		<span id="hours">12</span>:<span id="minutes">34</span> <span id="seconds">56</span> <span id="milliseconds">789</span>
+	</div>
+	<script>
+		'use strict';
+		$(function() {
+			function clock() {
+				var
+					now = new Date(),
+					hours = now.getHours(),
+					minutes = now.getMinutes(),
+					seconds = now.getSeconds(),
+					milliseconds = now.getMilliseconds();
+
+				if (seconds < 10) {
+					seconds = '0' + seconds;
+				}
+
+				$('#hours').html(hours);
+				$('#minutes').html(minutes);
+				$('#seconds').html(seconds);
+				$('#milliseconds').html(milliseconds);
+			}
+			
+			setInterval(clock, 10);
+		});
+	</script>
+</body>
+</html>
