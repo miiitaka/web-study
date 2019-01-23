@@ -26,7 +26,8 @@ body {
 }
 
 .l-header-global ul li {
-	margin: 0 30px;
+	margin: 0;
+	padding: 0 30px;
 }
 
 .l-header-items {
@@ -61,4 +62,22 @@ body {
 	border-radius: 5px;
 	padding: 5px;
 	width: 240px;
+}
+
+.menu-category {
+	position: relative;
+}
+
+.menu-category div {
+	background: #000;
+	display: none;
+	left: 0;
+	opacity: .7;
+	position: absolute;
+	top: 70px;
+}
+
+.l-slider {
+	margin: 0 auto;
+	width: 1000px;
 }

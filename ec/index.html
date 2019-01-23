@@ -4,7 +4,12 @@
 	<meta charset="utf-8">
 	<title>ECサイト</title>
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="menu.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<script src="slider.js"></script>
 </head>
 <body>
 	<div class="l-header">
@@ -17,7 +22,12 @@
 			<nav class="l-header-global">
 				<ul>
 					<li>NEW ITEM</li>
-					<li>CATEGORY</li>
+					<li id="menu-category" class="menu-category">
+						CATEGORY
+						<div id="sub-category">
+							テスト
+						</div>
+					</li>
 					<li>ABOUT US</li>
 					<li>GUIDE</li>
 				</ul>
@@ -33,6 +43,14 @@
 				</form>
 			</div>
 		</header>
+	</div>
+	
+	<div class="l-slider">
+		<ul id="slider">
+			<li><img src="images/dog1.jpg" alt="イヌ1" title="イヌ1"></li>
+			<li><img src="images/dog2.jpg" alt="イヌ2" title="イヌ2"></li>
+			<li><img src="images/dog3.jpg" alt="イヌ3" title="イヌ3"></li>
+		</ul>
 	</div>
 </body>
 </html>
