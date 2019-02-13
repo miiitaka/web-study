@@ -193,3 +193,88 @@ footer address {
 	text-align: center;
 	width: 100%;
 }
+
+.l-breadcrumb-list {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.l-breadcrumb-list ol {
+	display: flex;
+	list-style: none;
+	margin: 30px 0 40px;
+	padding: 0;
+}
+
+.l-breadcrumb-list ol li:not(:last-child)::after {
+	content: ">";
+	margin: 0 10px;
+}
+
+.l-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.l-wrapper section {
+	width: 200px;
+}
+
+.l-wrapper main {
+	width: 770px;
+}
+
+.nav-brand {
+	margin: 0 0 30px;
+}
+
+.nav-brand span {
+	display: block;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 0 20px;
+}
+
+.nav-brand ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-brand li {
+	border-bottom: solid 1px #d3d3d3;
+	box-sizing: border-box;
+	padding: 25px 0;
+}
+
+.nav-brand li:first-child {
+	border-top: solid 1px #d3d3d3;
+}
+
+.nav-category span {
+	display: block;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 0 20px;
+}
+
+.nav-category ul {
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-category li {
+	border-top: solid 1px #d3d3d3;
+	box-sizing: border-box;
+	padding: 25px 0;
+	position: relative;
+}
+
+.nav-category li::after {
+	content: ">";
+	position: absolute;
+	right: 0;
+}
