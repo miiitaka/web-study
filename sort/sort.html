@@ -1,0 +1,49 @@
+<script>
+	var
+		array1 = [5, 8, 2, 9, 1, 4, 7, 3, 6],
+		count = 1;
+	for(var i = 0; i < array1.length; i++) {
+		var isChange = 0;
+		for(var j = 0; j < array1.length - (i + 1); j++) {
+			if(array1[j] > array1[j + 1]) {
+				var tmp      = array1[j];
+				array1[j]     = array1[j + 1];
+				array1[j + 1] = tmp
+
+				isChange = 1;
+			}
+			console.log(count);
+			console.log(array1);
+			count++;
+		}
+		if (isChange == 0) {
+			break;
+		}
+	}
+</script>
+
+<script>
+	var
+		array2 = [5, 8, 2, 9, 1, 4, 7, 3, 6],
+		length = array2.length,
+		count = 1,
+		isChange = false,
+		isSort = false,
+		i = 0,
+		tmp;
+	while(!isSort) {
+		isChange = false;
+		for (i = 0; i < length - 1; i++) {
+			if (array2[i] > array2[i+1]) {
+				tmp = array2[i];
+				array2[i] = array2[i+1];
+				array2[i+1] = tmp;
+				isChange = true;
+			}
+		}
+		if (!isChange) {
+			isSort = true;
+		}
+	}
+	console.log(array2);
+</script>
