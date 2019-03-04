@@ -53,3 +53,16 @@ img {
   transform:rotateY(0deg);
   transition: opacity 100ms 150ms, transform 300ms 150ms;
 }
+
+.timeLimit span.limit {
+  color: #f00;
+}
+
+.result-wrapper {
+	background: rgba(0, 0, 0, .8);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}

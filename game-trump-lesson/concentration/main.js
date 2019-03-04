@@ -18,16 +18,20 @@ $(function() {
 
 	//jQueryらしく書く
 	var
-		$table       = $('#table'),
-		$li          = $('<li>'),
-		$img         = $('<img>'),
-		kind         = ['h', 'd', 'c', 's'],
-		cards        = [],
-		select_index = [],
-		select_num   = '',
-		$timer       = $('#timer'),
-		default_time = 180,
-		time         = default_time;
+		$table          = $('#table'),
+		$li             = $('<li>'),
+		$img            = $('<img>'),
+		kind            = ['h', 'd', 'c', 's'],
+		cards           = [],
+		select_index    = [],
+		select_num      = '',
+		$timer          = $('#timer'),
+		default_time    = 180,
+		time            = default_time,
+		game_start      = false,
+		$result_wrapper = $('#result_wrapper'),
+		$result         = $('#result'),
+		check_timer;
 
 	$timer.text(setTime());
 
@@ -70,6 +74,11 @@ $(function() {
 	}
 
 	$table.on('click', 'li', function() {
+		if(!game_start) {
+			startCountDown();
+			game_start = true;
+		}
+
 		if(select_index.length >= 2) {
 			return false;
 		}
@@ -129,12 +138,34 @@ $(function() {
 		select_num   = '';
 		select_index = [];
 	}
-	
+
 	//タイマーをセット
 	function setTime() {
 		minute = ('0' + Math.floor(time / 60)).slice(-2);
 		second = ('0' + time % 60).slice(-2);
 		return minute + '：' + second;
+	}
+
+	//カウントダウンタイマー
+	function startCountDown() {
+		check_timer = setInterval(function() {
+			time --;
+			$timer.text(setTime());
+			if(time === 59) {
+				$timer.addClass('limit');
+			} else if(time === 0) {
+				$timer.text('Time Up!');
+				setResult('Game Over!');
+			}
+		}, 1000);
+	}
+
+	function setResult(text) {
+		$table.off('click');
+		$result_wrapper.toggle();
+		$('#result_title').text(text);
+		$('#result_count').text();
+		clearInterval(check_timer);
 	}
 });
 
