@@ -31,6 +31,7 @@ $(function() {
 		game_start      = false,
 		$result_wrapper = $('#result_wrapper'),
 		$result         = $('#result'),
+		hit_count       = 0,
 		check_timer;
 
 	$timer.text(setTime());
@@ -137,6 +138,10 @@ $(function() {
 		$table.find('li').eq(select_index[1]).addClass('hit');
 		select_num   = '';
 		select_index = [];
+		hit_count += 2;
+		if(hit_count === cards_len) {
+			setResult('Game Clear!');
+		}
 	}
 
 	//タイマーをセット
@@ -164,17 +169,19 @@ $(function() {
 		$table.off('click');
 		$result_wrapper.toggle();
 		$('#result_title').text(text);
-		$('#result_count').text();
+		$('#result_count').text(hit_count);
 		clearInterval(check_timer);
 	}
+
+	function setResultArea() {
+		$result.css({
+			'top': ($(window).height() - $result.innerHeight()) / 2,
+			'left': ($(window).width() - $result.innerWidth()) / 2
+		});
+	}
+	setResultArea();
+
+	$(window).on('resize', function() {
+		setResultArea();
+	});
 });
-
-
-
-
-
-
-
-
-
-
