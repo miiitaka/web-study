@@ -57,6 +57,20 @@
 						ZOO LOGICALでは、特にゴリラ、ホッキョクグマなどが人気です。動物たちも皆さんに会えるのを楽しみにしています。ぜひ、会いに来てください。
 					</p>
 					<?php
+					
+						$dbh = new PDO('mysql:dbname=study07;host:localhost;charset=utf8', 'root', 'root');
+						$sql = 'SELECT * FROM students;';
+						$stmt = $dbh->query($sql);
+						$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+						// print_r($result);
+						
+						foreach ($result as $data) {
+							echo 'ID：' . $data['id'] . '<br>';
+							echo '名前：' . $data['name'] . '<br>';
+							echo '生年月日：' . $data['birthday'] . '<br>';
+							echo '<br>';
+						}
+					
 						$name = ['ゴリラ', 'ホッキョクグマ', 'ニホンザル', 'シマウマ', 'ツキノワグマ', 'ヒョウ'];
 						$description = [
 							'優しい性格で、バナナや葉だけではなく、昆虫も食べる雑食動物です。',
