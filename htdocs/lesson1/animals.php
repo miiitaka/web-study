@@ -58,28 +58,40 @@
 					</p>
 					<?php
 					
-						$dbh = new PDO('mysql:dbname=study07;host:localhost;charset=utf8', 'root', 'root');
-						$sql = 'SELECT * FROM students;';
-						$stmt = $dbh->query($sql);
-						$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-						// print_r($result);
-						
-						foreach ($result as $data) {
-							echo 'ID：' . $data['id'] . '<br>';
-							echo '名前：' . $data['name'] . '<br>';
-							echo '生年月日：' . $data['birthday'] . '<br>';
-							echo '<br>';
-						}
+						// $dbh = new PDO('mysql:dbname=study07;host:localhost;charset=utf8', 'root', 'root');
+						// $sql = 'SELECT * FROM students;';
+						// $stmt = $dbh->query($sql);
+						// $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+						// // print_r($result);
+						// 
+						// foreach ($result as $data) {
+						// 	echo 'ID：' . $data['id'] . '<br>';
+						// 	echo '名前：' . $data['name'] . '<br>';
+						// 	echo '生年月日：' . $data['birthday'] . '<br>';
+						// 	echo '<br>';
+						// }
 					
-						$name = ['ゴリラ', 'ホッキョクグマ', 'ニホンザル', 'シマウマ', 'ツキノワグマ', 'ヒョウ'];
-						$description = [
-							'優しい性格で、バナナや葉だけではなく、昆虫も食べる雑食動物です。',
-							'泳ぎが大得意で、何十kmも海を泳ぐことができます。',
-							'群れを作り集団生活をしています。知能が高く学習能力があります。',
-							'名前の由来であるその縞模様は、外敵から身を守る保護色といわれています。',
-							'特徴は胸の三日月形の模様です。昼にも活動しますが、実は夜行性です。',
-							'ご飯は木の上で食べることもあります。食事の時間にはその姿が見られるかもしれません。'
-						];
+						$dbh = new PDO('mysql:dbname=db_animal;host:localhost;charset=utf8', 'root', 'root');
+						$sql = 'SELECT * FROM mst_animals;';
+						$stmt = $dbh->query($sql);
+						$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+						
+						// foreach ($results as $result) {
+						// 	echo '<figcaption>';
+						// 	echo $result['name'] . '<br>';
+						// 	echo $result['description'];
+						// 	echo '</figcaption>';
+						// }
+						
+						foreach ($results as $result) {
+							echo <<< EOM
+							<figcaption>
+								{$result['name']}<br>
+								{$result['description']}
+							</figcaption>
+EOM;
+						}
+						
 						for($i = 0; $i < 6; $i++) {
 							if($i % 2 == 0) {
 								echo '<div class="animals_area">'."\n";
