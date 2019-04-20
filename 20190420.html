@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>2019年4月20日</title>
+</head>
+<body>
+  <script>
+    class Human {
+      constructor(name) {
+        this.name = name;
+      }
+      say() {
+        console.log(`My name is ${this.name}`);
+      }
+    }
+
+    class SuperHuman extends Human {
+      shout() {
+        console.log(`うぉー！！！！${this.name}`);
+      }
+      say() {
+        console.log("子のsay");
+      }
+    }
+    // const Manabito = new SuperHuman("まなびと");
+    // Manabito.say();
+    // Manabito.shout();
+
+    let a, b;
+    [a, b] = [1, 2];
+    console.log(`a = ${a}`);
+    console.log(`b = ${b}`);
+
+    const list = {
+      foo: 1,
+      bar: 2,
+      baz: 3
+    }
+    const {foo, bar, baz} = list;
+    console.log(`foo = ${foo}`);
+    console.log(`bar = ${bar}`);
+    console.log(`baz = ${baz}`);
+  </script>
+  <h1>ECMAScript</h1>
+</body>
+</html>
+
+
