@@ -72,26 +72,51 @@
 						// }
 					
 						$dbh = new PDO('mysql:dbname=db_animal;host:localhost;charset=utf8', 'root', 'root');
-						$sql = 'SELECT * FROM mst_animals;';
+						$sql = 'SELECT ma.name, ma.description, i.image
+										FROM mst_animals ma
+											LEFT JOIN images i
+											ON i.animal_id = ma.id;';
 						$stmt = $dbh->query($sql);
 						$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 						
+						// $index = 0;
 						// foreach ($results as $result) {
+						// 	if($index % 2 == 0) {
+						// 		echo '<div class="animals_area">' . "\n";
+						// 	}
+						// 	echo '<figure>';
+						// 	echo '<img src="images/' . $result['image'] . '">';
 						// 	echo '<figcaption>';
 						// 	echo $result['name'] . '<br>';
 						// 	echo $result['description'];
 						// 	echo '</figcaption>';
+						// 	echo '</figure>';
+						// 	if($index % 2 == 1) {
+						// 		echo '</div>';
+						// 	}
+						// 	$index++;
 						// }
 						
+						$index = 0;
 						foreach ($results as $result) {
+							if($index % 2 == 0) {
+								echo '<div class="animals_area">' . "\n";
+							}
 							echo <<< EOM
-							<figcaption>
-								{$result['name']}<br>
-								{$result['description']}
-							</figcaption>
+							<figure>
+								<img src="images/{$result['image']}">
+								<figcaption>
+									{$result['name']}<br>
+									{$result['description']}
+								</figcaption>
+							</figure>
 EOM;
+							if($index % 2 == 1) {
+								echo '</div>' . "\n";
+							}
+							$index++;
 						}
-						
+
 						for($i = 0; $i < 6; $i++) {
 							if($i % 2 == 0) {
 								echo '<div class="animals_area">'."\n";
