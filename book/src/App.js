@@ -1,17 +1,14 @@
-import React from 'react';
+import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import './App.css';
-import HeaderComponent from './components/HeaderComponent';
-import FooterComponent from './components/FooterComponent';
+import "./App.css";
+import DefaultLayout from "./containers";
 
 function App() {
   return (
     <React.Fragment>
       <HashRouter>
         <Switch>
-          <HeaderComponent />
-          <main>メイン領域</main>
-          <FooterComponent />
+          <Route path="/" name="home" component={DefaultLayout} />
         </Switch>
       </HashRouter>
     </React.Fragment>
