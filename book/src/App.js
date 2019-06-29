@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import "./css/base.css";
 import DefaultLayout from "./containers";
 
 function App() {

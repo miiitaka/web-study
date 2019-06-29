@@ -3,7 +3,7 @@ import React from "react";
 class FooterComponent extends React.Component {
   render() {
     return (
-      <footer>ヘッダー領域</footer>
+      <footer>&copy;2019</footer>
     );
   }
 }

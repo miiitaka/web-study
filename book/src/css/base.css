@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+footer {
+  text-align: center;
+  margin: 0 auto;
+  width: 1000px;
+}

@@ -7,10 +7,20 @@ class HeaderComponent extends React.Component {
     return (
       <header>
         <h1>
-          <a href="/">
+          <Link to="/">
             <img src={logo} width="100" height="100" alt="logo" />
-          </a>
+          </Link>
         </h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/mypage">MyPage</Link>
+            </li>
+            <li>
+              <Link to="/login">ログイン</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     );
   }
