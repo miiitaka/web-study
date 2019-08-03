@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>伝言板</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1><%=title %></h1>
+    </header>
+    <div>
+      <table>
+        <tr>
+          <th>伝言板</th>
+        </tr>
+        <tr>
+          <td><%=message %></td>
+        </tr>
+      </table>
+      <p>
+        <form method="post" action="/message/">
+          <input type="text" name="msg">
+          <input type="submit" value="送信">
+        </form>
+      </p>
+    </div>
+  </body>
+</html>

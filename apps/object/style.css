@@ -1,0 +1,15 @@
+table {
+  margin: 20px;
+}
+
+table tr th {
+  background-color: #999;
+  color: #fff;
+  padding: 3px 10px;
+}
+
+table tr td {
+  background-color: #eee;
+  color: #666;
+  padding: 3px 10px;
+}

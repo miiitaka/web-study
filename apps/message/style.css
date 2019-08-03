@@ -1,0 +1,11 @@
+table th {
+  background-color: #999;
+  color: #fff;
+  padding 3px 10px;
+}
+
+table td {
+  background-color: #eee;
+  color: #999;
+  padding 3px 10px;
+}
