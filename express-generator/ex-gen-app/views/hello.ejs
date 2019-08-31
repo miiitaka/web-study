@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div><%- content %></div>
+    <form method="post" action="/hello">
+      <input type="text" name="text" placeholder="記入してください">
+      <input type="submit" value="送信">
+    </form>
+  </body>
+</html>
