@@ -6,3 +6,22 @@ body {
 a {
   color: #00B7FF;
 }
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+tr:nth-child(odd) {
+  background: #ff9;
+}
+
+th {
+  border: solid 1px #000;
+  width: 200px
+}
+
+td {
+  border: solid 1px #000;
+  width: 300px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/jquery.min.js'></script>
+    <script src='/javascripts/ajax.js'></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+      <tr><th>名前</th><td id="name"></td></tr>
+      <tr><th>年齢</th><td id="age"></td></tr>
+      <tr><th>メール</th><td id="mail"></td></tr>
+    </table>
+    <input type="number" id="id" placeholder="記入してください">
+    <input type="button" id="send" value="送信">
+  </body>
+</html>
