@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if(content !== null) { %>
+    <ol>
+      <% for(var i in content) { %>
+      <li>
+        <a href="<%= content[i].link[0] %>"><%= content[i].title[0] %></a>
+      </li>
+      <% } %>
+    </ol>
+    <% } %>
+  </body>
+</html>
