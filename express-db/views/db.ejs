@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>MAIL</th>
+        <th>AGE</th>
+      </tr>
+      <% for(var i in content) { %>
+      <tr>
+        <td><%= content[i].id  %></td>
+        <td><%= content[i].name  %></td>
+        <td><%= content[i].mail  %></td>
+        <td><%= content[i].age  %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
