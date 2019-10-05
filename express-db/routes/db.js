@@ -27,4 +27,26 @@ router.get('/', function(req, res, next) {
   connection.end();
 });
 
+/* POST home page. */
+router.post('/edit', function(req, res, next) {
+  var id = req.body.id;
+  var name = req.body.name;
+  var mail = req.body.mail;
+  var age = req.body.age;
+  var updateData = {
+    'name': name,
+    'mail': mail,
+    'age': age
+  }
+
+  var connection = mysql.createConnection(mysql_setting);
+  connection.connect(function(error) {console.log(error);});
+
+  var updateSql = 'UPDATE mydata SET ? WHERE id = ?';
+  connection.query(updateSql, [updateData, id] , function(error, results, fields) {
+    res.redirect('/db');
+  });
+  connection.end();
+});
+
 module.exports = router;

@@ -3,6 +3,30 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $(".display").on("click", function() {
+        let target = $(this).parents("tr").find("td");
+        $("#id").val(target.eq(0).text());
+        $("#name").val(target.eq(1).text());
+        $("#mail").val(target.eq(2).text());
+        $("#age").val(target.eq(3).text());
+      });
+      $(".submit").on("click", function() {
+        let clickStatus = $(this).data("status");
+        let data = $("#inputForm");
+        if(clickStatus === "delete") {
+          if(!confirm("削除しますか？")){
+            return false;
+          }
+        } else {
+          data.attr("action", "/db/edit");
+          data.submit();
+        }
+      });
+    });
+  </script>
   </head>
   <body>
     <h1><%= title %></h1>
@@ -12,6 +36,7 @@
         <th>NAME</th>
         <th>MAIL</th>
         <th>AGE</th>
+        <th></th>
       </tr>
       <% for(var i in content) { %>
       <tr>
@@ -19,8 +44,31 @@
         <td><%= content[i].name  %></td>
         <td><%= content[i].mail  %></td>
         <td><%= content[i].age  %></td>
+        <td><button class="display">表示</button></td>
       </tr>
       <% } %>
     </table>
+    <form method="POST" action="" id="inputForm">
+      <table>
+        <tr>
+          <th>ID</th>
+          <td><input type="number" name="id" id="id" readonly></td>
+        </tr>
+        <tr>
+          <th>NAME</th>
+          <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+          <th>MAIL</th>
+          <td><input type="mail" name="mail" id="mail"></td>
+        </tr>
+        <tr>
+          <th>AGE</th>
+          <td><input type="number" name="age" id="age"></td>
+        </tr>
+      </table>
+      <button class="submit" data-status="update">更新</button>
+      <button class="submit" data-status="delete">削除</button>
+    </form>
   </body>
 </html>
