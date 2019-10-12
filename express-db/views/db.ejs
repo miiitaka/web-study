@@ -19,9 +19,16 @@
         if(clickStatus === "delete") {
           if(!confirm("削除しますか？")){
             return false;
+          } else {
+            data.attr("action", "/db/delete");
+            data.submit();
           }
         } else {
-          data.attr("action", "/db/edit");
+          if($("#id").val() === "") {
+            data.attr("action", "/db/insert");
+          } else {
+            data.attr("action", "/db/edit");
+          }
           data.submit();
         }
       });
@@ -48,6 +55,13 @@
       </tr>
       <% } %>
     </table>
+    <% if(error) { %>
+    <ul>
+      <% for(let n in error) { %>
+      <li><%= error[n].msg %></li>
+      <% } %>
+    </ul>
+    <% } %>
     <form method="POST" action="" id="inputForm">
       <table>
         <tr>
