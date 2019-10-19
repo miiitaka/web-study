@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Hi!<span class="login_name"><%= login.name %></span>Welcome to <%= title %></p>
+    <form action="/" method="POST">
+      <input type="search" name="find" size="40" value="<%= form.find %>">
+      <input type="submit" value="検索">
+    </form>
+    <hr>
+    <ul>
+    <% for( var i in content ) { %>
+      <% if( content[i].attributes.user_id !== login.id ) continue; %>
+      <li><a href="/mark/<%= content[i].id %>"><%= content[i].attributes.title %></a></li>
+    <% } %>
+    </ul>
+    <p><a href="/add">※データを登録</a></p>
+  </body>
+</html>
