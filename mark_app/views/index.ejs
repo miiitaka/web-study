@@ -13,6 +13,7 @@
       <input type="submit" value="検索">
     </form>
     <hr>
+    <p><%= message %></p>
     <ul>
     <% for( var i in content ) { %>
       <% if( content[i].attributes.user_id !== login.id ) continue; %>
