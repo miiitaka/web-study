@@ -1,10 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, FlatList } from 'react-native';
 import MapView from 'react-native-maps';
 import { point } from '@turf/helpers';
 import destination from '@turf/destination';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+
+const TagItem = (props) => {
+  const { tag } = props;
+  return (
+    <View style={styles.tagItem}>
+      <View style={styles.tag}>
+        <Text>{tag[0]}</Text>
+      </View>
+      <View style={styles.tag}>
+        <Text>{tag[1]}</Text>
+      </View>
+    </View>
+  )
+};
 
 class MapScreen extends React.Component {
   static navigationOption = {
@@ -31,7 +45,7 @@ class MapScreen extends React.Component {
     const west = destination(center, horizontalMeter, -90, options);
     const north = destination(center, verticalMeter, 0, options);
     const east = destination(center, horizontalMeter, 90, options);
-    this.setState({
+      this.setState({
       south: south.geometry.coordinates[1],
       west: west.geometry.coordinates[0],
       north: north.geometry.coordinates[1],
@@ -133,9 +147,39 @@ class ElementScreen extends React.Component {
     if (element === undefined) {
       return (<View />);
     }
+    let tagItems = [];
+    for (const property in element.tags) {
+      tagItems.push([property, element.tags[property]]);
+    }
+    console.log(element.lat);
+    console.log(element.lon);
     return (
-      <View>
-        <Text>{element.id}</Text>
+      <View style={{flex: 1}}>
+        <MapView
+          style={{flex: 1}}
+          initialRegion={{
+            latitude: element.lat,
+            longitude: element.lon,
+            latitudeDelta: 0.00922,
+            longitudeDelta: 0.00521
+          }}>
+          <MapView.Marker
+            coordinate={{
+              latitude: element.lat,
+              longitude: element.lon
+            }}
+          />
+        </MapView>
+        <ScrollView style={{flex: 1}}>
+          <FlatList
+            data={tagItems}
+            extraData={this.state}
+            renderItem={({item}) =>
+              <TagItem tag={item} />
+            }
+            keyExtractor={(item, index) => "tag:" + item[0]}
+          />
+        </ScrollView>
       </View>
     );
   }
@@ -168,6 +212,15 @@ const styles = StyleSheet.create({
   },
   buttonItem: {
     textAlign: 'center'
+  },
+  tagItem: {
+    flexDirection: 'row'
+  },
+  tag: {
+    flex: 1
+  },
+  item: {
+    flex: 1
   }
 });
 
